@@ -9,8 +9,13 @@ subcategory breakdown of how the individual events happened.
 ## What's here
 
 `index.html` — the whole thing. One self-contained file: no build step, no framework,
-no dependency except Google Fonts. Charts are plain HTML and CSS; the drill-down
-explorer is a single inline script over an embedded JSON tree.
+no dependency except Google Fonts. The page is a drill-down explorer and nothing else:
+pick a dataset, click any bar to break that category down, four levels deep at the
+deepest point. Every level is deep-linkable, so you can send someone straight to a
+specific breakdown.
+
+The prose analysis that used to sit around the explorer was removed; it is still in
+this repo's git history if you want it back.
 
 ## The data
 

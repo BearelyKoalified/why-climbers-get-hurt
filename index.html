@@ -1,0 +1,968 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Why Climbers Get Hurt</title>
+<meta name="description" content="Seven decades of American Alpine Club accident reports, with the mistakes ranked by how often they actually appear and each event type broken down by mechanism.">
+<meta name="author" content="Matthew Abercrombie">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Why Climbers Get Hurt">
+<meta property="og:description" content="Seven decades of American Alpine Club accident reports, with the mistakes ranked by how often they actually appear and each event type broken down by mechanism.">
+<meta name="twitter:card" content="summary">
+<link rel="canonical" href="https://bearelykoalified.github.io/why-climbers-get-hurt/">
+<meta property="og:url" content="https://bearelykoalified.github.io/why-climbers-get-hurt/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect width='16' height='16' fill='%232a78d6'/%3E%3Crect x='3' y='9' width='2.5' height='4' fill='white'/%3E%3Crect x='6.75' y='6' width='2.5' height='7' fill='white'/%3E%3Crect x='10.5' y='3' width='2.5' height='10' fill='white'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;1,6..72,400&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+    :root{color-scheme:light;padding-top:env(safe-area-inset-top,0px);
+      padding-bottom:env(safe-area-inset-bottom,0px)}
+    html{-webkit-text-size-adjust:100%}
+    body{margin:0;font:14px system-ui,-apple-system,"Segoe UI",sans-serif;background:#f9f9f7}
+    img{max-width:100%}
+    [hidden]{display:none!important}
+</style>
+</head>
+<body>
+<style>
+/* Layout: one reading column on a granite ground; charts and tables break out wider. */
+:root{
+  --plane:#f9f9f7; --surface:#fcfcfb;
+  --fg:#0b0b0b; --fg2:#52514e; --muted:#898781;
+  --grid:#e1e0d9; --rule:#c3c2b7; --hair:rgba(11,11,11,.10);
+  --s1:#2a78d6; --s2:#eb6834;
+  --display:"Newsreader",Georgia,"Times New Roman",serif;
+  --sans:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,"SFMono-Regular",Consolas,monospace;
+  --labw:16rem;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --plane:#0d0d0d; --surface:#1a1a19;
+  --fg:#ffffff; --fg2:#c3c2b7; --muted:#898781;
+  --grid:#2c2c2a; --rule:#383835; --hair:rgba(255,255,255,.10);
+  --s1:#3987e5; --s2:#d95926; color-scheme:dark;
+}}
+:root[data-theme="dark"]{
+  --plane:#0d0d0d; --surface:#1a1a19;
+  --fg:#ffffff; --fg2:#c3c2b7; --muted:#898781;
+  --grid:#2c2c2a; --rule:#383835; --hair:rgba(255,255,255,.10);
+  --s1:#3987e5; --s2:#d95926; color-scheme:dark;
+}
+*{box-sizing:border-box}
+body{background:var(--plane);color:var(--fg);font-family:var(--sans);font-size:16px;line-height:1.6;
+  -webkit-font-smoothing:antialiased}
+.wrap{max-width:1060px;margin:0 auto;padding-inline:20px;padding-block:0}
+.col{max-width:68ch}
+h1,h2,h3{font-family:var(--display);font-weight:600;text-wrap:balance;margin:0}
+h1{font-size:clamp(2.1rem,5.4vw,3.4rem);line-height:1.08;letter-spacing:-.015em}
+h2{font-size:clamp(1.45rem,3vw,1.9rem);line-height:1.2;margin-bottom:.35em}
+h3{font-size:1.08rem;font-family:var(--sans);font-weight:600;letter-spacing:.005em;margin-bottom:.25em}
+p{margin:0 0 1em}
+a{color:var(--s1);text-underline-offset:2px}
+.eyebrow{font-family:var(--mono);font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);
+  margin:0 0 1.1em}
+.standfirst{font-family:var(--display);font-size:clamp(1.1rem,2.3vw,1.35rem);line-height:1.5;color:var(--fg2);
+  margin:1.1em 0 0;max-width:62ch}
+header{padding-block:clamp(2.4rem,7vw,4.6rem) 0}
+.srcline{font-family:var(--mono);font-size:.74rem;line-height:1.7;color:var(--muted);margin-top:1.8em;
+  padding-top:1.1em;border-top:1px solid var(--rule);max-width:62ch}
+
+/* stat strip */
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(176px,1fr));gap:1px;background:var(--hair);
+  border:1px solid var(--hair);margin-block:clamp(2.4rem,6vw,3.6rem)}
+.stat{background:var(--surface);padding:1.05rem 1.1rem 1.15rem;min-width:0}
+.stat b{display:block;font-size:clamp(1.7rem,4vw,2.25rem);font-weight:600;line-height:1.05;letter-spacing:-.02em}
+.stat span{display:block;font-size:.78rem;color:var(--fg2);margin-top:.5em;line-height:1.45}
+.stat em{display:block;font-family:var(--mono);font-size:.68rem;color:var(--muted);font-style:normal;margin-top:.3em}
+
+section{padding-block:clamp(2rem,5vw,3.2rem)}
+section+section{border-top:1px solid var(--grid)}
+.lede{color:var(--fg2);max-width:62ch}
+
+/* charts */
+.plot{margin:2rem 0 0;position:relative}
+.plotrows{display:grid;gap:5px;position:relative;z-index:1}
+.row{display:grid;grid-template-columns:var(--labw) minmax(0,1fr);gap:14px;align-items:center;
+  padding-block:2px;border-radius:3px;outline:none}
+.row:hover,.row:focus-visible{background:color-mix(in srgb,var(--s1) 7%,transparent)}
+.row:focus-visible{box-shadow:inset 0 0 0 1px var(--s1)}
+.rlab{font-size:.8125rem;line-height:1.3;color:var(--fg2);text-align:right;min-width:0;overflow-wrap:break-word}
+.rtrack{position:relative;display:flex;align-items:center;min-width:0}
+.rbar{height:14px;background:var(--s1);border-radius:0 4px 4px 0;flex:0 0 auto}
+.rbar.s1{background:var(--s1)}
+.rbar.s2{background:var(--s2)}
+.rval{margin-left:9px;font-family:var(--mono);font-size:.75rem;font-variant-numeric:tabular-nums;color:var(--fg);
+  white-space:nowrap}
+.rpct{margin-left:7px;font-family:var(--mono);font-size:.7rem;color:var(--muted);white-space:nowrap}
+.glwrap{position:absolute;top:0;bottom:24px;left:0;right:0;margin-left:calc(var(--labw) + 14px);pointer-events:none}
+.gl{position:absolute;top:0;bottom:0;width:1px;background:var(--grid)}
+.gl:first-child{background:var(--rule)}
+.axis{position:relative;height:24px;margin-left:calc(var(--labw) + 14px);margin-top:6px}
+.tick{position:absolute;top:0;font-family:var(--mono);font-size:.69rem;color:var(--muted);
+  transform:translateX(-50%);white-space:nowrap}
+.tick:first-child{transform:none}
+figcaption{font-size:.78rem;color:var(--muted);margin-top:.9rem;max-width:62ch;line-height:1.5}
+.legend{display:flex;flex-wrap:wrap;gap:1.1rem;margin-bottom:1.1rem;
+  margin-left:calc(var(--labw) + 14px)}
+.key{display:inline-flex;align-items:center;gap:.45rem;font-size:.78rem;color:var(--fg2)}
+.sw{width:13px;height:13px;border-radius:2px;display:inline-block;flex:0 0 auto}
+.sw.s1{background:var(--s1)}
+.sw.s2{background:var(--s2)}
+.grouped .row{grid-template-columns:var(--labw) minmax(0,1fr) 4.4rem}
+.grouped .rtrack{flex-direction:column;align-items:stretch;gap:2px}
+.gbar{display:flex;align-items:center}
+.gbar .rbar{height:10px}
+.rdelta{font-family:var(--mono);font-size:.74rem;text-align:right;white-space:nowrap}
+.rdelta.up{color:var(--fg);font-weight:500}
+.rdelta.down{color:var(--muted)}
+.rdelta.flat{color:var(--fg2)}
+.grouped .glwrap{bottom:24px}
+
+/* tables */
+.tblwrap{overflow-x:auto;margin:1.8rem 0 0;border:1px solid var(--hair);background:var(--surface)}
+table{border-collapse:collapse;width:100%;min-width:620px;font-size:.8125rem}
+caption{caption-side:top;text-align:left;font-family:var(--mono);font-size:.7rem;letter-spacing:.1em;
+  text-transform:uppercase;color:var(--muted);padding:.9rem 1rem .75rem}
+thead th{text-align:right;font-weight:600;font-size:.72rem;color:var(--fg2);padding:.5rem .7rem .55rem;
+  border-bottom:1px solid var(--rule);vertical-align:bottom;line-height:1.3}
+thead th:first-child{text-align:left}
+thead th span{display:block;font-weight:400;color:var(--muted);font-size:.66rem;font-family:var(--mono)}
+tbody th{text-align:left;font-weight:400;padding:.42rem .7rem;color:var(--fg)}
+tbody td{text-align:right;padding:.42rem .7rem;font-family:var(--mono);font-variant-numeric:tabular-nums;
+  color:var(--fg2);white-space:nowrap}
+tbody tr+tr th,tbody tr+tr td{border-top:1px solid var(--grid)}
+tbody td.strong{color:var(--fg);font-weight:500}
+tbody td.note{text-align:left;font-family:var(--sans);white-space:normal;color:var(--muted);font-size:.76rem;
+  min-width:17rem}
+tbody tr:hover th,tbody tr:hover td{background:color-mix(in srgb,var(--s1) 6%,transparent)}
+table.fam{min-width:700px}
+
+/* small multiples */
+.sm{display:grid;grid-template-columns:repeat(auto-fit,minmax(310px,1fr));gap:2.2rem 2.6rem;margin-top:1.9rem}
+.smp{margin:0;--labw:10.5rem}
+.smp .plotrows{gap:4px}
+.smp .rlab{font-size:.76rem}
+.smp .rbar{height:11px}
+.smp .rval{font-size:.7rem;margin-left:7px}
+.smp .glwrap{top:2.8rem;bottom:24px}
+.smhead{margin:0 0 .9rem;font-family:var(--sans);font-size:.92rem;font-weight:600;color:var(--fg);
+  max-width:none;padding-bottom:.5rem;border-bottom:1px solid var(--rule);line-height:1.3}
+.smhead span{font-family:var(--mono);font-weight:400;font-size:.69rem;color:var(--muted);
+  margin-left:.5rem;white-space:nowrap}
+table.tags{min-width:780px}
+table.tags tbody td.lft{text-align:left;font-family:var(--sans);white-space:normal;min-width:11rem}
+table.tags tbody td.dim{color:var(--muted);font-size:.76rem;min-width:9rem}
+.subhead{font-family:var(--display);font-size:1.25rem;font-weight:600;margin:2.8rem 0 .4em}
+.subhead:first-of-type{margin-top:1.6rem}
+
+/* drill-down explorer */
+.exp{border:1px solid var(--hair);background:var(--surface);padding:1.2rem 1.3rem 1.5rem;margin-top:1.9rem}
+.crumbs{display:flex;flex-wrap:wrap;gap:.2rem;align-items:center;font-size:.78rem;margin-bottom:1.1rem;
+  padding-bottom:.9rem;border-bottom:1px solid var(--grid)}
+.crumb{background:none;border:0;padding:.18rem .34rem;font:inherit;color:var(--s1);cursor:pointer;
+  border-radius:3px;text-align:left}
+.crumb:hover{background:color-mix(in srgb,var(--s1) 10%,transparent)}
+.crumb[aria-current]{color:var(--fg2);cursor:default;font-weight:500}
+.crumb[aria-current]:hover{background:none}
+.crumbsep{color:var(--muted);padding:0 .1rem}
+.exphead{display:flex;flex-wrap:wrap;justify-content:space-between;gap:.3rem 1rem;align-items:baseline}
+.exptitle{font-family:var(--display);font-size:1.22rem;font-weight:600;line-height:1.25}
+.expmeta{font-family:var(--mono);font-size:.72rem;color:var(--muted);white-space:nowrap}
+.expnote{font-size:.8rem;color:var(--fg2);margin:.5rem 0 0;max-width:64ch;line-height:1.5}
+#xbody{margin-top:1.4rem}
+.xcards{display:grid;grid-template-columns:repeat(auto-fit,minmax(232px,1fr));gap:1px;
+  background:var(--hair);border:1px solid var(--hair)}
+.xcard{display:flex;flex-direction:column;gap:.3rem;align-items:flex-start;text-align:left;
+  background:var(--surface);border:0;padding:1rem 1.05rem 1.1rem;font:inherit;color:inherit;cursor:pointer;
+  min-width:0}
+.xcard:hover{background:color-mix(in srgb,var(--s1) 7%,transparent)}
+.xcard b{font-size:1rem;font-weight:600;line-height:1.3}
+.xunit{font-family:var(--mono);font-size:.68rem;color:var(--muted)}
+.xblurb{font-size:.82rem;color:var(--fg2);line-height:1.45;margin-top:.15rem}
+.xgo{font-family:var(--mono);font-size:.7rem;color:var(--s1);margin-top:.5rem}
+.xgo i{font-style:normal;padding-left:.2rem}
+button.row{border:0;background:none;font:inherit;color:inherit;cursor:pointer;width:100%}
+button.row:hover{background:color-mix(in srgb,var(--s1) 8%,transparent)}
+.chev{font-family:var(--mono);font-size:.72rem;color:var(--muted);margin-left:9px;white-space:nowrap}
+button.row:hover .chev{color:var(--s1)}
+.xleaf{margin-top:1.2rem;border-top:1px solid var(--rule)}
+.rep{border-bottom:1px solid var(--grid);padding:.7rem .1rem}
+.rep b{display:block;font-family:var(--mono);font-size:.7rem;letter-spacing:.09em;text-transform:uppercase;
+  color:var(--fg2);margin-bottom:.15rem}
+.rep span{font-size:.86rem;color:var(--fg)}
+.xfoot{font-size:.78rem;color:var(--muted);margin-top:1rem;max-width:64ch}
+.xempty{font-size:.85rem;color:var(--fg2);padding:.6rem 0}
+
+/* callouts */
+.note-box{background:var(--surface);border:1px solid var(--hair);border-left:3px solid var(--s2);
+  padding:1.1rem 1.2rem;margin:1.8rem 0 0;max-width:68ch}
+.note-box h3{margin-bottom:.4em}
+.hl{font-family:var(--mono);font-size:.84em;background:color-mix(in srgb,var(--s1) 11%,transparent);padding:.1em .35em;border-radius:2px;white-space:nowrap}
+.note-box p:last-child{margin-bottom:0}
+.note-box p{font-size:.9rem;color:var(--fg2)}
+ul.plain{margin:0 0 1em;padding-left:1.15rem;max-width:62ch;color:var(--fg2)}
+ul.plain li{margin-bottom:.55em}
+ul.plain li b{color:var(--fg);font-weight:600}
+.defs{display:grid;gap:1rem;grid-template-columns:repeat(auto-fit,minmax(255px,1fr));margin:1.6rem 0 0}
+.def{background:var(--surface);border:1px solid var(--hair);padding:1rem 1.1rem;min-width:0}
+.def b{display:block;font-size:.95rem;margin-bottom:.35em}
+.def p{font-size:.85rem;color:var(--fg2);margin:0}
+.def code{font-family:var(--mono);font-size:.8em;color:var(--muted)}
+.srcs{list-style:none;padding:0;margin:1.4rem 0 0;max-width:68ch}
+.srcs li{padding-block:.7rem;border-top:1px solid var(--grid);font-size:.85rem;color:var(--fg2);line-height:1.5}
+.srcs li b{color:var(--fg);font-weight:600;display:block;font-size:.9rem}
+footer{padding-block:2.4rem 3.2rem;border-top:1px solid var(--rule);margin-top:1rem}
+footer p{font-family:var(--mono);font-size:.72rem;color:var(--muted);max-width:68ch;margin:0}
+
+#tip{position:fixed;z-index:50;max-width:min(330px,80vw);background:var(--surface);color:var(--fg);
+  border:1px solid var(--rule);padding:.6rem .7rem;font-size:.775rem;line-height:1.45;pointer-events:none;
+  box-shadow:0 6px 22px rgba(0,0,0,.14);opacity:0;transition:opacity .11s}
+#tip.on{opacity:1}
+
+@media (max-width:760px){
+  :root{--labw:1fr}
+  .row,.grouped .row{grid-template-columns:minmax(0,1fr);gap:3px;padding-block:6px}
+  .rlab{text-align:left}
+  .glwrap,.axis,.legend{margin-left:0}
+  .grouped .row{grid-template-rows:auto auto auto}
+  .rdelta{text-align:left}
+  .plotrows{gap:10px}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+</style>
+
+<div class="wrap">
+<header>
+  <p class="eyebrow">Accidents in North American Climbing &middot; 1951&ndash;2017</p>
+  <h1>Why climbers get hurt</h1>
+  <p class="standfirst">Seven decades of American Alpine Club accident reports, sorted by how often each
+  mistake actually shows up. The headline is not a surprise &mdash; climbers fall off rock. The useful part is the
+  second column, where the club records what the climber did before the fall.</p>
+  <p class="srcline">Source: <em>Accidents in North American Climbing</em> 2018 edition, Data Tables I&ndash;III
+  (pp. 122&ndash;127). Figures transcribed from the published tables. Cumulative columns run 1951&ndash;2016 for the
+  United States and 1959&ndash;2016 for Canada; the 2017 column is that single year. Canadian reporting has gaps,
+  including no data at all for 2006&ndash;2011.</p>
+</header>
+
+<div class="stats">
+  <div class="stat"><b>8,693</b><span>Reported climbing accidents in the cumulative tables</span><em>U.S. 7,656 &middot; Canada 1,037</em></div>
+  <div class="stat"><b>16,300</b><span>Climbers involved in those accidents</span><em>1951&ndash;2017, both countries</em></div>
+  <div class="stat"><b>2,007</b><span>Deaths recorded across the whole series</span><em>U.S. 1,696 &middot; Canada 311</em></div>
+  <div class="stat"><b>1.38</b><span>Immediate causes tagged per accident, so shares do not sum to 100%</span><em>0.95 contributory tags each</em></div>
+</div>
+
+<main>
+
+<section>
+  <h2>The tables answer two different questions</h2>
+  <p class="lede">Table III of each annual report splits causation in two, and conflating the halves is the most
+  common way the data gets misread. Almost every popular summary of this dataset quotes the first half and calls
+  it &ldquo;causes of climbing accidents,&rdquo; which is how you end up with the finding that climbing accidents
+  are caused by falling.</p>
+  <div class="defs">
+    <div class="def"><b>Immediate cause</b><p>The physical event that produced the injury: a fall on rock, a
+    falling block, an avalanche, a rappel that came apart. Mostly a description of the accident, not an error.</p></div>
+    <div class="def"><b>Contributory cause</b><p>What the climber or the party did, or failed to do, that let the
+    event happen: no protection placed, climbing unroped, out of their depth, no helmet. This is the mistakes
+    column.</p></div>
+  </div>
+  <div class="note-box">
+    <h3>Counting rule</h3>
+    <p>An accident can carry several tags in both halves, so the counts below are tags, not accidents, and the
+    percentages are shares of all reported accidents rather than slices of a pie. Across the cumulative series
+    there are 1.38 immediate-cause tags and 0.95 contributory tags per accident. Treat every number here as
+    &ldquo;appeared in this share of accident reports.&rdquo;</p>
+  </div>
+</section>
+
+<section id="explore">
+  <h2>Explore it yourself</h2>
+  <p class="lede">One view over everything on this page. Pick a dataset, then click any bar to break that
+  category down further. Immediate causes drill into the club's rappel sub-causes; the 2018 edition drills all
+  the way to the individual accident reports.</p>
+  <div class="exp" id="xp">
+    <nav class="crumbs" id="xcrumbs" aria-label="Breadcrumb"><span class="crumb" aria-current="page">Climbing accident data</span></nav>
+    <div class="exphead">
+      <span class="exptitle" id="xtitle">Pick a dataset</span>
+      <span class="expmeta" id="xmeta">5 datasets</span>
+    </div>
+    <p class="expnote" id="xnote">Counts are cause tags unless a level says otherwise, and a single accident
+    can carry several tags &mdash; so bars within a level are comparable, but they do not sum to the number of
+    accidents.</p>
+    <div id="xbody" class="xcards"><button class="xcard" type="button" data-goto="con"><b>Contributory causes</b><span class="xunit">1951–2016 &middot; 8,286 tags across 8,693 accidents</span><span class="xblurb">What the climber or party did, or failed to do. The mistakes column.</span><span class="xgo">19 categories <i>&rarr;</i></span></button>
+<button class="xcard" type="button" data-goto="imm"><b>Immediate causes</b><span class="xunit">1951–2016 &middot; 11,973 tags across 8,693 accidents</span><span class="xblurb">The physical event that caused the injury. Rappel failure drills down one more level.</span><span class="xgo">22 categories <i>&rarr;</i></span></button>
+<button class="xcard" type="button" data-goto="ed18"><b>2018 edition, report by report</b><span class="xunit">2017 &middot; 61 reports, 90 tags</span><span class="xblurb">Every published report for 2017, coded from its headline tags. Drills down to the individual accidents.</span><span class="xgo">5 categories <i>&rarr;</i></span></button>
+<button class="xcard" type="button" data-goto="ter"><b>Terrain</b><span class="xunit">1951–2016 &middot; 9,385 tags</span><span class="xblurb">What the party was climbing on. One accident can span two surfaces.</span><span class="xgo">5 categories <i>&rarr;</i></span></button>
+<button class="xcard" type="button" data-goto="pha"><b>Ascent or descent</b><span class="xunit">1951–2016 &middot; 7,106 accidents with a phase recorded</span><span class="xblurb">Which half of the climb the accident happened on, where recorded.</span><span class="xgo">4 categories <i>&rarr;</i></span></button></div>
+  </div>
+  <p class="xfoot">Keyboard: tab to a bar and press Enter to drill in, or use the breadcrumb to come back up.
+  Every level is also reachable as a plain link &mdash; the address bar tracks where you are.</p>
+</section>
+
+<section>
+  <h2>The mistakes, ranked</h2>
+  <p class="lede">Contributory causes, 1951&ndash;2016, United States and Canada combined. Three failures carry 3,581 of the tags between
+  them: no rope, not enough skill for the ground, and no useful protection in the rock.</p>
+  <figure class="plot" id="c-con" role="group" aria-label="Contributory causes of climbing accidents, ranked by count">
+<div class="glwrap" aria-hidden="true"><div class="gl" style="left:0.00%"></div><div class="gl" style="left:19.50%"></div><div class="gl" style="left:39.00%"></div><div class="gl" style="left:58.50%"></div><div class="gl" style="left:78.00%"></div></div>
+<div class="plotrows">
+<div class="row" tabindex="0" data-tip="Climbing unroped &middot; 1,284 accident tags, 14.8% of reported accidents &middot; U.S. 1,110, Canada 174 &middot; 2017 alone: 6 (3.2%)"><div class="rlab">Climbing unroped</div><div class="rtrack"><div class="rbar" style="width:71.54%"></div><span class="rval">1,284</span><span class="rpct">14.8%</span></div></div>
+<div class="row" tabindex="0" data-tip="Exceeding abilities / inexperience &middot; 1,263 accident tags, 14.5% of reported accidents &middot; U.S. 1,057, Canada 206 &middot; 2017 alone: 17 (9.1%)"><div class="rlab">Exceeding abilities / inexperience</div><div class="rtrack"><div class="rbar" style="width:70.37%"></div><span class="rval">1,263</span><span class="rpct">14.5%</span></div></div>
+<div class="row" tabindex="0" data-tip="Placed no / inadequate protection &middot; 1,034 accident tags, 11.9% of reported accidents &middot; U.S. 929, Canada 105 &middot; 2017 alone: 11 (5.9%)"><div class="rlab">Placed no / inadequate protection</div><div class="rtrack"><div class="rbar" style="width:57.61%"></div><span class="rval">1,034</span><span class="rpct">11.9%</span></div></div>
+<div class="row" tabindex="0" data-tip="Inadequate equipment / clothing &middot; 843 accident tags, 9.7% of reported accidents &middot; U.S. 769, Canada 74 &middot; 2017 alone: 12 (6.5%)"><div class="rlab">Inadequate equipment / clothing</div><div class="rtrack"><div class="rbar" style="width:46.97%"></div><span class="rval">843</span><span class="rpct">9.7%</span></div></div>
+<div class="row" tabindex="0" data-tip="Weather &middot; 618 accident tags, 7.1% of reported accidents &middot; U.S. 542, Canada 76 &middot; 2017 alone: 5 (2.7%)"><div class="rlab">Weather</div><div class="rtrack"><div class="rbar" style="width:34.43%"></div><span class="rval">618</span><span class="rpct">7.1%</span></div></div>
+<div class="row" tabindex="0" data-tip="Climbing alone &middot; 544 accident tags, 6.3% of reported accidents &middot; U.S. 470, Canada 74 &middot; 2017 alone: 3 (1.6%)"><div class="rlab">Climbing alone</div><div class="rtrack"><div class="rbar" style="width:30.31%"></div><span class="rval">544</span><span class="rpct">6.3%</span></div></div>
+<div class="row" tabindex="0" data-tip="No helmet &middot; 465 accident tags, 5.3% of reported accidents &middot; U.S. 390, Canada 75 &middot; 2017 alone: 6 (3.2%)"><div class="rlab">No helmet</div><div class="rtrack"><div class="rbar" style="width:25.91%"></div><span class="rval">465</span><span class="rpct">5.3%</span></div></div>
+<div class="row" tabindex="0" data-tip="Inadequate belay &middot; 332 accident tags, 3.8% of reported accidents &middot; U.S. 303, Canada 29 &middot; 2017 alone: 8 (4.3%)"><div class="rlab">Inadequate belay</div><div class="rtrack"><div class="rbar" style="width:18.50%"></div><span class="rval">332</span><span class="rpct">3.8%</span></div></div>
+<div class="row" tabindex="0" data-tip="Poor position &middot; 281 accident tags, 3.2% of reported accidents &middot; U.S. 253, Canada 28 &middot; 2017 alone: 9 (4.8%)"><div class="rlab">Poor position</div><div class="rtrack"><div class="rbar" style="width:15.66%"></div><span class="rval">281</span><span class="rpct">3.2%</span></div></div>
+<div class="row" tabindex="0" data-tip="Nut / cam pulled out &middot; 277 accident tags, 3.2% of reported accidents &middot; U.S. 244, Canada 33 &middot; 2017 alone: 13 (7.0%)"><div class="rlab">Nut / cam pulled out</div><div class="rtrack"><div class="rbar" style="width:15.43%"></div><span class="rval">277</span><span class="rpct">3.2%</span></div></div>
+<div class="row" tabindex="0" data-tip="Darkness &middot; 208 accident tags, 2.4% of reported accidents &middot; U.S. 185, Canada 23 &middot; 2017 alone: 2 (1.1%)"><div class="rlab">Darkness</div><div class="rtrack"><div class="rbar" style="width:11.59%"></div><span class="rval">208</span><span class="rpct">2.4%</span></div></div>
+<div class="row" tabindex="0" data-tip="Loose rock / failure to test holds &middot; 178 accident tags, 2.0% of reported accidents &middot; U.S. 131, Canada 47 &middot; 2017 alone: 11 (5.9%)"><div class="rlab">Loose rock / failure to test holds</div><div class="rtrack"><div class="rbar" style="width:9.92%"></div><span class="rval">178</span><span class="rpct">2.0%</span></div></div>
+<div class="row" tabindex="0" data-tip="Party separated &middot; 151 accident tags, 1.7% of reported accidents &middot; U.S. 139, Canada 12 &middot; 2017 alone: 3 (1.6%)"><div class="rlab">Party separated</div><div class="rtrack"><div class="rbar" style="width:8.41%"></div><span class="rval">151</span><span class="rpct">1.7%</span></div></div>
+<div class="row" tabindex="0" data-tip="Failed to follow directions / route &middot; 116 accident tags, 1.3% of reported accidents &middot; U.S. 98, Canada 18 &middot; 2017 alone: 17 (9.1%)"><div class="rlab">Failed to follow directions / route</div><div class="rtrack"><div class="rbar" style="width:6.46%"></div><span class="rval">116</span><span class="rpct">1.3%</span></div></div>
+<div class="row" tabindex="0" data-tip="Piton / ice screw pulled out &middot; 102 accident tags, 1.2% of reported accidents &middot; U.S. 87, Canada 15 &middot; 2017 alone: 0 (0.0%)"><div class="rlab">Piton / ice screw pulled out</div><div class="rtrack"><div class="rbar" style="width:5.68%"></div><span class="rval">102</span><span class="rpct">1.2%</span></div></div>
+<div class="row" tabindex="0" data-tip="Exposure &middot; 84 accident tags, 1.0% of reported accidents &middot; U.S. 68, Canada 16 &middot; 2017 alone: 0 (0.0%)"><div class="rlab">Exposure</div><div class="rtrack"><div class="rbar" style="width:4.68%"></div><span class="rval">84</span><span class="rpct">1.0%</span></div></div>
+<div class="row" tabindex="0" data-tip="Illness &middot; 50 accident tags, 0.6% of reported accidents &middot; U.S. 41, Canada 9 &middot; 2017 alone: 2 (1.1%)"><div class="rlab">Illness</div><div class="rtrack"><div class="rbar" style="width:2.79%"></div><span class="rval">50</span><span class="rpct">0.6%</span></div></div>
+<div class="row" tabindex="0" data-tip="Equipment failure &middot; 29 accident tags, 0.3% of reported accidents &middot; U.S. 22, Canada 7 &middot; 2017 alone: 1 (0.5%)"><div class="rlab">Equipment failure</div><div class="rtrack"><div class="rbar" style="width:1.62%"></div><span class="rval">29</span><span class="rpct">0.3%</span></div></div>
+</div>
+<div class="axis" aria-hidden="true"><div class="tick" style="left:0.00%">0</div><div class="tick" style="left:19.50%">350</div><div class="tick" style="left:39.00%">700</div><div class="tick" style="left:58.50%">1,050</div><div class="tick" style="left:78.00%">1,400</div></div>
+<figcaption>Accident tags, United States and Canada combined, 1951&ndash;2016. Hover or focus a row for the country split and the 2017 figure.</figcaption>
+</figure>
+  <h3 style="margin-top:2.6rem">What the ranking says</h3>
+  <ul class="plain">
+    <li><b>Climbing unroped (1,284) and climbing alone (544) are the same story told twice.</b> Together they carry 1,828
+    tags, and they often appear on the same report. Both skew old: both are mostly mid-century alpine and scrambling
+    accidents, and both have nearly vanished from recent single-year counts.</li>
+    <li><b>Inexperience (1,263) is the one that never fades.</b> It is the only top-three contributory cause still
+    tagged at roughly its historical rate in recent data, and it is the only cause that appears near the top of
+    <em>both</em> halves of the table &mdash; 640 times as the immediate cause as well.</li>
+    <li><b>Protection failure is bigger than its rank suggests.</b> &ldquo;Placed no or inadequate
+    protection&rdquo; (1,034) plus pulled nuts and cams (277) plus pulled pitons and ice screws (102) is 1,413
+    contributory tags, which puts the gear-in-the-rock family ahead of everything but the rope itself.</li>
+    <li><b>Belay and position errors sit mid-table but are rising.</b> Inadequate belay (332) covers
+    miscommunication, ineffective belay and no belay at all; poor position (281) is the belayer standing too far
+    from the wall or in the fall line.</li>
+  </ul>
+</section>
+
+<section>
+  <h2>What actually happened</h2>
+  <p class="lede">Immediate causes, same period. A fall or slip on rock is the immediate cause in 4,489 accidents
+  &mdash; more than half of everything in the series, and more than the next six categories combined.</p>
+  <figure class="plot" id="c-imm" role="group" aria-label="Immediate causes of climbing accidents, ranked by count">
+<div class="glwrap" aria-hidden="true"><div class="gl" style="left:0.00%"></div><div class="gl" style="left:19.50%"></div><div class="gl" style="left:39.00%"></div><div class="gl" style="left:58.50%"></div><div class="gl" style="left:78.00%"></div></div>
+<div class="plotrows">
+<div class="row" tabindex="0" data-tip="Fall or slip on rock &middot; 4,489 accident tags, 51.6% of reported accidents &middot; U.S. 4,173, Canada 316 &middot; 2017 alone: 62 (33.3%)"><div class="rlab">Fall or slip on rock</div><div class="rtrack"><div class="rbar" style="width:70.03%"></div><span class="rval">4,489</span><span class="rpct">51.6%</span></div></div>
+<div class="row" tabindex="0" data-tip="Fall on snow or ice &middot; 1,415 accident tags, 16.3% of reported accidents &middot; U.S. 1,194, Canada 221 &middot; 2017 alone: 23 (12.4%)"><div class="rlab">Fall on snow or ice</div><div class="rtrack"><div class="rbar" style="width:22.07%"></div><span class="rval">1,415</span><span class="rpct">16.3%</span></div></div>
+<div class="row" tabindex="0" data-tip="Falling rock, ice, or object &middot; 851 accident tags, 9.8% of reported accidents &middot; U.S. 703, Canada 148 &middot; 2017 alone: 13 (7.0%)"><div class="rlab">Falling rock, ice, or object</div><div class="rtrack"><div class="rbar" style="width:13.28%"></div><span class="rval">851</span><span class="rpct">9.8%</span></div></div>
+<div class="row" tabindex="0" data-tip="Exceeding abilities / inexperience &middot; 640 accident tags, 7.4% of reported accidents &middot; U.S. 604, Canada 36 &middot; 2017 alone: 1 (0.5%)"><div class="rlab">Exceeding abilities / inexperience</div><div class="rtrack"><div class="rbar" style="width:9.98%"></div><span class="rval">640</span><span class="rpct">7.4%</span></div></div>
+<div class="row" tabindex="0" data-tip="Illness &middot; 492 accident tags, 5.7% of reported accidents &middot; U.S. 465, Canada 27 &middot; 2017 alone: 5 (2.7%)"><div class="rlab">Illness</div><div class="rtrack"><div class="rbar" style="width:7.68%"></div><span class="rval">492</span><span class="rpct">5.7%</span></div></div>
+<div class="row" tabindex="0" data-tip="Stranded / lost &middot; 481 accident tags, 5.5% of reported accidents &middot; U.S. 418, Canada 63 &middot; 2017 alone: 13 (7.0%)"><div class="rlab">Stranded / lost</div><div class="rtrack"><div class="rbar" style="width:7.50%"></div><span class="rval">481</span><span class="rpct">5.5%</span></div></div>
+<div class="row" tabindex="0" data-tip="Rappel failure / error &middot; 469 accident tags, 5.4% of reported accidents &middot; U.S. 414, Canada 55 &middot; 2017 alone: 18 (9.7%)"><div class="rlab">Rappel failure / error</div><div class="rtrack"><div class="rbar" style="width:7.32%"></div><span class="rval">469</span><span class="rpct">5.4%</span></div></div>
+<div class="row" tabindex="0" data-tip="Avalanche &middot; 467 accident tags, 5.4% of reported accidents &middot; U.S. 334, Canada 133 &middot; 2017 alone: 5 (2.7%)"><div class="rlab">Avalanche</div><div class="rtrack"><div class="rbar" style="width:7.29%"></div><span class="rval">467</span><span class="rpct">5.4%</span></div></div>
+<div class="row" tabindex="0" data-tip="Nut / cam pulled out &middot; 306 accident tags, 3.5% of reported accidents &middot; U.S. 295, Canada 11 &middot; 2017 alone: 2 (1.1%)"><div class="rlab">Nut / cam pulled out</div><div class="rtrack"><div class="rbar" style="width:4.77%"></div><span class="rval">306</span><span class="rpct">3.5%</span></div></div>
+<div class="row" tabindex="0" data-tip="Exposure &middot; 301 accident tags, 3.5% of reported accidents &middot; U.S. 287, Canada 14 &middot; 2017 alone: 0 (0.0%)"><div class="rlab">Exposure</div><div class="rtrack"><div class="rbar" style="width:4.70%"></div><span class="rval">301</span><span class="rpct">3.5%</span></div></div>
+<div class="row" tabindex="0" data-tip="Failure to follow route &middot; 295 accident tags, 3.4% of reported accidents &middot; U.S. 259, Canada 36 &middot; 2017 alone: 0 (0.0%)"><div class="rlab">Failure to follow route</div><div class="rtrack"><div class="rbar" style="width:4.60%"></div><span class="rval">295</span><span class="rpct">3.4%</span></div></div>
+<div class="row" tabindex="0" data-tip="Loss of control / glissade &middot; 261 accident tags, 3.0% of reported accidents &middot; U.S. 243, Canada 18 &middot; 2017 alone: 3 (1.6%)"><div class="rlab">Loss of control / glissade</div><div class="rtrack"><div class="rbar" style="width:4.07%"></div><span class="rval">261</span><span class="rpct">3.0%</span></div></div>
+<div class="row" tabindex="0" data-tip="Fall into crevasse / moat &middot; 242 accident tags, 2.8% of reported accidents &middot; U.S. 190, Canada 52 &middot; 2017 alone: 7 (3.8%)"><div class="rlab">Fall into crevasse / moat</div><div class="rtrack"><div class="rbar" style="width:3.78%"></div><span class="rval">242</span><span class="rpct">2.8%</span></div></div>
+<div class="row" tabindex="0" data-tip="Faulty use of crampons &middot; 134 accident tags, 1.5% of reported accidents &middot; U.S. 127, Canada 7 &middot; 2017 alone: 0 (0.0%)"><div class="rlab">Faulty use of crampons</div><div class="rtrack"><div class="rbar" style="width:2.09%"></div><span class="rval">134</span><span class="rpct">1.5%</span></div></div>
+<div class="row" tabindex="0" data-tip="Piton / ice screw pulled out &middot; 108 accident tags, 1.2% of reported accidents &middot; U.S. 95, Canada 13 &middot; 2017 alone: 0 (0.0%)"><div class="rlab">Piton / ice screw pulled out</div><div class="rtrack"><div class="rbar" style="width:1.68%"></div><span class="rval">108</span><span class="rpct">1.2%</span></div></div>
+<div class="row" tabindex="0" data-tip="Skiing (ski mountaineering) &middot; 87 accident tags, 1.0% of reported accidents &middot; U.S. 73, Canada 14 &middot; 2017 alone: 10 (5.4%)"><div class="rlab">Skiing (ski mountaineering)</div><div class="rtrack"><div class="rbar" style="width:1.36%"></div><span class="rval">87</span><span class="rpct">1.0%</span></div></div>
+<div class="row" tabindex="0" data-tip="Ascending too fast &middot; 79 accident tags, 0.9% of reported accidents &middot; U.S. 79, Canada 0 &middot; 2017 alone: 1 (0.5%)"><div class="rlab">Ascending too fast</div><div class="rtrack"><div class="rbar" style="width:1.23%"></div><span class="rval">79</span><span class="rpct">0.9%</span></div></div>
+<div class="row" tabindex="0" data-tip="Lightning &middot; 75 accident tags, 0.9% of reported accidents &middot; U.S. 68, Canada 7 &middot; 2017 alone: 0 (0.0%)"><div class="rlab">Lightning</div><div class="rtrack"><div class="rbar" style="width:1.17%"></div><span class="rval">75</span><span class="rpct">0.9%</span></div></div>
+<div class="row" tabindex="0" data-tip="Equipment failure &middot; 21 accident tags, 0.2% of reported accidents &middot; U.S. 18, Canada 3 &middot; 2017 alone: 0 (0.0%)"><div class="rlab">Equipment failure</div><div class="rtrack"><div class="rbar" style="width:0.33%"></div><span class="rval">21</span><span class="rpct">0.2%</span></div></div>
+<div class="row" tabindex="0" data-tip="Lowering error &middot; 7 accident tags, 0.1% of reported accidents &middot; U.S. 6, Canada 1 &middot; 2017 alone: 12 (6.5%)"><div class="rlab">Lowering error</div><div class="rtrack"><div class="rbar" style="width:0.11%"></div><span class="rval">7</span><span class="rpct">0.1%</span></div></div>
+</div>
+<div class="axis" aria-hidden="true"><div class="tick" style="left:0.00%">0</div><div class="tick" style="left:19.50%">1,250</div><div class="tick" style="left:39.00%">2,500</div><div class="tick" style="left:58.50%">3,750</div><div class="tick" style="left:78.00%">5,000</div></div>
+<figcaption>Accident tags, United States and Canada combined, 1951&ndash;2016. Hover or focus a row for the country split and the 2017 figure.</figcaption>
+</figure>
+  <h3 style="margin-top:2.6rem">Reading the long tail</h3>
+  <p>The interesting entries are the ones whose rank badly understates their current importance. <b>Rappel failure
+  (469)</b> sits seventh over the whole series but is the clearest growth category in the data. <b>Lowering error
+  (7)</b> looks trivial only because the club did not track it separately until the 2016 edition; in 2017 alone it
+  was tagged 12 times. Meanwhile crampon errors, glissading accidents and exposure &mdash; the signature causes of
+  the mountaineering era &mdash; have gone quiet.</p>
+  <div class="note-box">
+    <h3>How the club defines the descent errors</h3>
+    <p><b>Rappel failure / error</b> covers inadequate anchors, uneven ropes, no knots in the rope ends,
+    simul-rappelling errors, pendulum swings and attaching the device incorrectly. <b>Lowering error</b>, added as
+    its own category in 2016, covers a rope that was too short, miscommunication, and lowering with the wrong rope.
+    Before 2016 lowering accidents were folded into the rappel line, so the rappel total is slightly inflated for
+    earlier years and the lowering total is close to meaningless.</p>
+  </div>
+</section>
+
+<section>
+  <h2>How these events actually happened</h2>
+  <p class="lede">Table III stops at the top level: it will tell you 469 accidents began with a rappel failure,
+  but not whether the anchor pulled, the ropes were uneven, or the climber came off the ends. Two sources go a
+  level deeper. The club itself published a sub-cause breakdown for rappelling, and every published report carries
+  an editor-written headline of the form <span class="hl">RAPPEL ERROR | Uneven Ropes, No Stopper Knots</span>,
+  which can be counted.</p>
+
+  <h3 class="subhead">How rappels fail, in the club's own numbers</h3>
+  <p>This is the one top-level cause the AAC has broken down itself, covering every rappelling accident reported
+  over twelve years. Anchors and backups are the headline, but the largest single slice is the simplest mistake
+  on the list: two rope ends that were not the same length.</p>
+  <figure class="plot" id="c-rap" role="group" aria-label="Causes of rappelling accidents, 2000 to 2011">
+<div class="glwrap" aria-hidden="true"><div class="gl" style="left:0.00%"></div><div class="gl" style="left:26.00%"></div><div class="gl" style="left:52.00%"></div><div class="gl" style="left:78.00%"></div></div>
+<div class="plotrows">
+<div class="row" tabindex="0" data-tip="Uneven ropes, rappelled off the ends &middot; 29.0% of rappelling accidents reported to ANAM, 2000&ndash;2011"><div class="rlab">Uneven ropes, rappelled off the ends</div><div class="rtrack"><div class="rbar" style="width:75.40%"></div><span class="rval">29.0%</span></div></div>
+<div class="row" tabindex="0" data-tip="Inadequate anchor system &middot; 25.8% of rappelling accidents reported to ANAM, 2000&ndash;2011"><div class="rlab">Inadequate anchor system</div><div class="rtrack"><div class="rbar" style="width:67.08%"></div><span class="rval">25.8%</span></div></div>
+<div class="row" tabindex="0" data-tip="Inadequate rappel backup &middot; 19.4% of rappelling accidents reported to ANAM, 2000&ndash;2011"><div class="rlab">Inadequate rappel backup</div><div class="rtrack"><div class="rbar" style="width:50.44%"></div><span class="rval">19.4%</span></div></div>
+<div class="row" tabindex="0" data-tip="Poor technique &middot; 11.3% of rappelling accidents reported to ANAM, 2000&ndash;2011"><div class="rlab">Poor technique</div><div class="rtrack"><div class="rbar" style="width:29.38%"></div><span class="rval">11.3%</span></div></div>
+<div class="row" tabindex="0" data-tip="Inadequate equipment &middot; 9.7% of rappelling accidents reported to ANAM, 2000&ndash;2011"><div class="rlab">Inadequate equipment</div><div class="rtrack"><div class="rbar" style="width:25.22%"></div><span class="rval">9.7%</span></div></div>
+<div class="row" tabindex="0" data-tip="Unknown &middot; 4.8% of rappelling accidents reported to ANAM, 2000&ndash;2011"><div class="rlab">Unknown</div><div class="rtrack"><div class="rbar" style="width:12.48%"></div><span class="rval">4.8%</span></div></div>
+</div>
+<div class="axis" aria-hidden="true"><div class="tick" style="left:0.00%">0%</div><div class="tick" style="left:26.00%">10%</div><div class="tick" style="left:52.00%">20%</div><div class="tick" style="left:78.00%">30%</div></div>
+<figcaption>Share of all rappelling accidents reported to <em>Accidents in North American Mountaineering</em>, 2000&ndash;2011. Redrawn from the pie chart in Rob Hess, &ldquo;Know the Ropes: Rappelling,&rdquo; ANAM 2012. The six slices sum to 100%, so unlike the main tables these are shares of one accident each.</figcaption>
+</figure>
+  <div class="note-box">
+    <h3>Three of these six are the same thirty seconds</h3>
+    <p>Uneven ropes (29%), no rappel backup (19.4%) and poor technique (11.3%) all describe the same moment at
+    the anchor, before weight goes on the system. Together they are 60% of rappelling accidents, and the checks
+    that catch them &mdash; pulling the ends level, tying stopper knots, rigging an autoblock &mdash; cost
+    well under a minute.</p>
+  </div>
+
+  <h3 class="subhead">Mechanisms by event type</h3>
+  <p>Counted from the headline tags of all 61 accident reports published in the 2018 edition. All four panels
+  share one scale, so bars are comparable across panels. These are mechanisms only; the factors describing the
+  climber rather than the event are separated out below.</p>
+  <div class="sm">
+<figure class="plot smp" role="group" aria-label="Rappelling and lowering: mechanisms">
+<figcaption class="smhead">Rappelling and lowering <span>15 reports</span></figcaption>
+<div class="glwrap" aria-hidden="true"><div class="gl" style="left:0.00%"></div><div class="gl" style="left:39.00%"></div><div class="gl" style="left:78.00%"></div></div>
+<div class="plotrows">
+<div class="row" tabindex="0" data-tip="Rope too short for the pitch &middot; 3 of the 15 rappelling and lowering reports &middot; 2018 edition"><div class="rlab">Rope too short for the pitch</div><div class="rtrack"><div class="rbar" style="width:29.25%"></div><span class="rval">3</span></div></div>
+<div class="row" tabindex="0" data-tip="No rappel backup or autoblock &middot; 3 of the 15 rappelling and lowering reports &middot; 2018 edition"><div class="rlab">No rappel backup or autoblock</div><div class="rtrack"><div class="rbar" style="width:29.25%"></div><span class="rval">3</span></div></div>
+<div class="row" tabindex="0" data-tip="Uneven ropes &middot; 3 of the 15 rappelling and lowering reports &middot; 2018 edition"><div class="rlab">Uneven ropes</div><div class="rtrack"><div class="rbar" style="width:29.25%"></div><span class="rval">3</span></div></div>
+<div class="row" tabindex="0" data-tip="Lost control of the brake strand &middot; 2 of the 15 rappelling and lowering reports &middot; 2018 edition"><div class="rlab">Lost control of the brake strand</div><div class="rtrack"><div class="rbar" style="width:19.50%"></div><span class="rval">2</span></div></div>
+<div class="row" tabindex="0" data-tip="No knot in the rope ends &middot; 2 of the 15 rappelling and lowering reports &middot; 2018 edition"><div class="rlab">No knot in the rope ends</div><div class="rtrack"><div class="rbar" style="width:19.50%"></div><span class="rval">2</span></div></div>
+<div class="row" tabindex="0" data-tip="Rappelled off the rope ends &middot; 1 of the 15 rappelling and lowering reports &middot; 2018 edition"><div class="rlab">Rappelled off the rope ends</div><div class="rtrack"><div class="rbar" style="width:9.75%"></div><span class="rval">1</span></div></div>
+<div class="row" tabindex="0" data-tip="Belayer pulled off station &middot; 1 of the 15 rappelling and lowering reports &middot; 2018 edition"><div class="rlab">Belayer pulled off station</div><div class="rtrack"><div class="rbar" style="width:9.75%"></div><span class="rval">1</span></div></div>
+<div class="row" tabindex="0" data-tip="Trusted old fixed anchor &middot; 1 of the 15 rappelling and lowering reports &middot; 2018 edition"><div class="rlab">Trusted old fixed anchor</div><div class="rtrack"><div class="rbar" style="width:9.75%"></div><span class="rval">1</span></div></div>
+<div class="row" tabindex="0" data-tip="Inattentive or inadequate belay &middot; 1 of the 15 rappelling and lowering reports &middot; 2018 edition"><div class="rlab">Inattentive or inadequate belay</div><div class="rtrack"><div class="rbar" style="width:9.75%"></div><span class="rval">1</span></div></div>
+</div>
+<div class="axis" aria-hidden="true"><div class="tick" style="left:0.00%">0</div><div class="tick" style="left:39.00%">4</div><div class="tick" style="left:78.00%">8</div></div>
+</figure>
+<figure class="plot smp" role="group" aria-label="Roped falls on rock: mechanisms">
+<figcaption class="smhead">Roped falls on rock <span>25 reports</span></figcaption>
+<div class="glwrap" aria-hidden="true"><div class="gl" style="left:0.00%"></div><div class="gl" style="left:39.00%"></div><div class="gl" style="left:78.00%"></div></div>
+<div class="plotrows">
+<div class="row" tabindex="0" data-tip="Miscommunication &middot; 7 of the 25 roped falls on rock reports &middot; 2018 edition"><div class="rlab">Miscommunication</div><div class="rtrack"><div class="rbar" style="width:68.25%"></div><span class="rval">7</span></div></div>
+<div class="row" tabindex="0" data-tip="Too little protection placed &middot; 6 of the 25 roped falls on rock reports &middot; 2018 edition"><div class="rlab">Too little protection placed</div><div class="rtrack"><div class="rbar" style="width:58.50%"></div><span class="rval">6</span></div></div>
+<div class="row" tabindex="0" data-tip="Protection pulled out &middot; 3 of the 25 roped falls on rock reports &middot; 2018 edition"><div class="rlab">Protection pulled out</div><div class="rtrack"><div class="rbar" style="width:29.25%"></div><span class="rval">3</span></div></div>
+<div class="row" tabindex="0" data-tip="Inattentive or inadequate belay &middot; 3 of the 25 roped falls on rock reports &middot; 2018 edition"><div class="rlab">Inattentive or inadequate belay</div><div class="rtrack"><div class="rbar" style="width:29.25%"></div><span class="rval">3</span></div></div>
+<div class="row" tabindex="0" data-tip="Off route &middot; 2 of the 25 roped falls on rock reports &middot; 2018 edition"><div class="rlab">Off route</div><div class="rtrack"><div class="rbar" style="width:19.50%"></div><span class="rval">2</span></div></div>
+<div class="row" tabindex="0" data-tip="Rope cut or damaged &middot; 1 of the 25 roped falls on rock reports &middot; 2018 edition"><div class="rlab">Rope cut or damaged</div><div class="rtrack"><div class="rbar" style="width:9.75%"></div><span class="rval">1</span></div></div>
+<div class="row" tabindex="0" data-tip="Taken off belay &middot; 1 of the 25 roped falls on rock reports &middot; 2018 edition"><div class="rlab">Taken off belay</div><div class="rtrack"><div class="rbar" style="width:9.75%"></div><span class="rval">1</span></div></div>
+<div class="row" tabindex="0" data-tip="Failed to clip the anchor &middot; 1 of the 25 roped falls on rock reports &middot; 2018 edition"><div class="rlab">Failed to clip the anchor</div><div class="rtrack"><div class="rbar" style="width:9.75%"></div><span class="rval">1</span></div></div>
+<div class="row" tabindex="0" data-tip="Loose rock or untested hold &middot; 1 of the 25 roped falls on rock reports &middot; 2018 edition"><div class="rlab">Loose rock or untested hold</div><div class="rtrack"><div class="rbar" style="width:9.75%"></div><span class="rval">1</span></div></div>
+<div class="row" tabindex="0" data-tip="Quickdraw unclipped itself &middot; 1 of the 25 roped falls on rock reports &middot; 2018 edition"><div class="rlab">Quickdraw unclipped itself</div><div class="rtrack"><div class="rbar" style="width:9.75%"></div><span class="rval">1</span></div></div>
+<div class="row" tabindex="0" data-tip="Belayer pulled off station &middot; 1 of the 25 roped falls on rock reports &middot; 2018 edition"><div class="rlab">Belayer pulled off station</div><div class="rtrack"><div class="rbar" style="width:9.75%"></div><span class="rval">1</span></div></div>
+</div>
+<div class="axis" aria-hidden="true"><div class="tick" style="left:0.00%">0</div><div class="tick" style="left:39.00%">4</div><div class="tick" style="left:78.00%">8</div></div>
+</figure>
+<figure class="plot smp" role="group" aria-label="Snow, ice and glacier: mechanisms">
+<figcaption class="smhead">Snow, ice and glacier <span>11 reports</span></figcaption>
+<div class="glwrap" aria-hidden="true"><div class="gl" style="left:0.00%"></div><div class="gl" style="left:39.00%"></div><div class="gl" style="left:78.00%"></div></div>
+<div class="plotrows">
+<div class="row" tabindex="0" data-tip="Could not self-arrest &middot; 4 of the 11 snow, ice and glacier reports &middot; 2018 edition"><div class="rlab">Could not self-arrest</div><div class="rtrack"><div class="rbar" style="width:39.00%"></div><span class="rval">4</span></div></div>
+<div class="row" tabindex="0" data-tip="Climbing unroped &middot; 2 of the 11 snow, ice and glacier reports &middot; 2018 edition"><div class="rlab">Climbing unroped</div><div class="rtrack"><div class="rbar" style="width:19.50%"></div><span class="rval">2</span></div></div>
+<div class="row" tabindex="0" data-tip="Error at a transition &middot; 1 of the 11 snow, ice and glacier reports &middot; 2018 edition"><div class="rlab">Error at a transition</div><div class="rtrack"><div class="rbar" style="width:9.75%"></div><span class="rval">1</span></div></div>
+<div class="row" tabindex="0" data-tip="Bad tool or screw placement &middot; 1 of the 11 snow, ice and glacier reports &middot; 2018 edition"><div class="rlab">Bad tool or screw placement</div><div class="rtrack"><div class="rbar" style="width:9.75%"></div><span class="rval">1</span></div></div>
+<div class="row" tabindex="0" data-tip="Off route &middot; 1 of the 11 snow, ice and glacier reports &middot; 2018 edition"><div class="rlab">Off route</div><div class="rtrack"><div class="rbar" style="width:9.75%"></div><span class="rval">1</span></div></div>
+<div class="row" tabindex="0" data-tip="Dropped or lost equipment &middot; 1 of the 11 snow, ice and glacier reports &middot; 2018 edition"><div class="rlab">Dropped or lost equipment</div><div class="rtrack"><div class="rbar" style="width:9.75%"></div><span class="rval">1</span></div></div>
+<div class="row" tabindex="0" data-tip="Crampons not worn &middot; 1 of the 11 snow, ice and glacier reports &middot; 2018 edition"><div class="rlab">Crampons not worn</div><div class="rtrack"><div class="rbar" style="width:9.75%"></div><span class="rval">1</span></div></div>
+</div>
+<div class="axis" aria-hidden="true"><div class="tick" style="left:0.00%">0</div><div class="tick" style="left:39.00%">4</div><div class="tick" style="left:78.00%">8</div></div>
+</figure>
+<figure class="plot smp" role="group" aria-label="Stranded, lost and rockfall: mechanisms">
+<figcaption class="smhead">Stranded, lost and rockfall <span>7 reports</span></figcaption>
+<div class="glwrap" aria-hidden="true"><div class="gl" style="left:0.00%"></div><div class="gl" style="left:39.00%"></div><div class="gl" style="left:78.00%"></div></div>
+<div class="plotrows">
+<div class="row" tabindex="0" data-tip="Off route &middot; 3 of the 7 stranded, lost and rockfall reports &middot; 2018 edition"><div class="rlab">Off route</div><div class="rtrack"><div class="rbar" style="width:29.25%"></div><span class="rval">3</span></div></div>
+<div class="row" tabindex="0" data-tip="Chose not to rappel / stuck &middot; 1 of the 7 stranded, lost and rockfall reports &middot; 2018 edition"><div class="rlab">Chose not to rappel / stuck</div><div class="rtrack"><div class="rbar" style="width:9.75%"></div><span class="rval">1</span></div></div>
+<div class="row" tabindex="0" data-tip="Too little protection placed &middot; 1 of the 7 stranded, lost and rockfall reports &middot; 2018 edition"><div class="rlab">Too little protection placed</div><div class="rtrack"><div class="rbar" style="width:9.75%"></div><span class="rval">1</span></div></div>
+</div>
+<div class="axis" aria-hidden="true"><div class="tick" style="left:0.00%">0</div><div class="tick" style="left:39.00%">4</div><div class="tick" style="left:78.00%">8</div></div>
+</figure>
+</div>
+  <p style="margin-top:1.8rem;max-width:62ch;color:var(--fg2)">Each panel has a different character.
+  Rappelling and lowering failures are almost entirely <em>rigging</em> errors &mdash; the rope was the wrong
+  length, the ends were uneven, there was no knot and no backup. Roped falls on rock are dominated by
+  <em>communication</em>: seven of 25 reports turned on one climber believing they were on belay when they were
+  not, which is more than protection failures of every kind combined. Snow and ice comes down to arrest skills.
+  Stranding is almost purely route-finding.</p>
+
+  <h3 class="subhead">What the climber brought to it</h3>
+  <p>The same reports also carry tags that describe the party or the day rather than the mechanism. These are the
+  conditions under which the mechanisms above get a chance to operate.</p>
+  <figure class="plot" id="c-ctx" role="group" aria-label="Background and aggravating factors">
+<div class="glwrap" aria-hidden="true"><div class="gl" style="left:0.00%"></div><div class="gl" style="left:15.60%"></div><div class="gl" style="left:31.20%"></div><div class="gl" style="left:46.80%"></div><div class="gl" style="left:62.40%"></div><div class="gl" style="left:78.00%"></div></div>
+<div class="plotrows">
+<div class="row" tabindex="0" data-tip="Inexperience &middot; tagged in 9 of the 61 published reports"><div class="rlab">Inexperience</div><div class="rtrack"><div class="rbar" style="width:70.20%"></div><span class="rval">9</span></div></div>
+<div class="row" tabindex="0" data-tip="No helmet &middot; tagged in 7 of the 61 published reports"><div class="rlab">No helmet</div><div class="rtrack"><div class="rbar" style="width:54.60%"></div><span class="rval">7</span></div></div>
+<div class="row" tabindex="0" data-tip="Crowding at the crag &middot; tagged in 2 of the 61 published reports"><div class="rlab">Crowding at the crag</div><div class="rtrack"><div class="rbar" style="width:15.60%"></div><span class="rval">2</span></div></div>
+<div class="row" tabindex="0" data-tip="Fatigue &middot; tagged in 2 of the 61 published reports"><div class="rlab">Fatigue</div><div class="rtrack"><div class="rbar" style="width:15.60%"></div><span class="rval">2</span></div></div>
+<div class="row" tabindex="0" data-tip="Poor snow or ice conditions &middot; tagged in 2 of the 61 published reports"><div class="rlab">Poor snow or ice conditions</div><div class="rtrack"><div class="rbar" style="width:15.60%"></div><span class="rval">2</span></div></div>
+<div class="row" tabindex="0" data-tip="Climbing for speed &middot; tagged in 1 of the 61 published reports"><div class="rlab">Climbing for speed</div><div class="rtrack"><div class="rbar" style="width:7.80%"></div><span class="rval">1</span></div></div>
+<div class="row" tabindex="0" data-tip="Dehydration &middot; tagged in 1 of the 61 published reports"><div class="rlab">Dehydration</div><div class="rtrack"><div class="rbar" style="width:7.80%"></div><span class="rval">1</span></div></div>
+<div class="row" tabindex="0" data-tip="Inadequate equipment &middot; tagged in 1 of the 61 published reports"><div class="rlab">Inadequate equipment</div><div class="rtrack"><div class="rbar" style="width:7.80%"></div><span class="rval">1</span></div></div>
+<div class="row" tabindex="0" data-tip="Hypothermia &middot; tagged in 1 of the 61 published reports"><div class="rlab">Hypothermia</div><div class="rtrack"><div class="rbar" style="width:7.80%"></div><span class="rval">1</span></div></div>
+<div class="row" tabindex="0" data-tip="Caught out after dark &middot; tagged in 1 of the 61 published reports"><div class="rlab">Caught out after dark</div><div class="rtrack"><div class="rbar" style="width:7.80%"></div><span class="rval">1</span></div></div>
+</div>
+<div class="axis" aria-hidden="true"><div class="tick" style="left:0.00%">0</div><div class="tick" style="left:15.60%">2</div><div class="tick" style="left:31.20%">4</div><div class="tick" style="left:46.80%">6</div><div class="tick" style="left:62.40%">8</div><div class="tick" style="left:78.00%">10</div></div>
+<figcaption>Factors the editors tagged that describe the climber or the day rather than the mechanism, across all 61 published reports in the 2018 edition.</figcaption>
+</figure>
+  <p style="margin-top:1.8rem;max-width:62ch;color:var(--fg2)">Inexperience leads, and it cuts across every
+  panel. No helmet is tagged in 7 of 61 reports and in a third of the rappelling and lowering group, where the
+  usual pattern is a short uncontrolled fall onto rock &mdash; the exact case a helmet is for.</p>
+
+  <div class="note-box">
+    <h3>What I coded, and what the club wrote</h3>
+    <p>The primary events and the tag phrases in the table below are transcribed from the report headlines as
+    printed. The grouping into panels and the collapsing of synonymous phrases
+    (&ldquo;Communication Problems&rdquo;, &ldquo;Communication Error&rdquo; and
+    &ldquo;Miscommunication&rdquo; into one mechanism) is mine. Sixty-one reports with 90 tags between them is a
+    small sample and one year only, so the shape of each panel is worth more than any single bar.</p>
+  </div>
+  <div class="tblwrap"><table class="tags"><caption>Every published report in the 2018 edition, with its headline tags as printed and the mechanism each was coded to</caption><thead><tr><th scope="col">Primary event</th><th scope="col">Headline tags, verbatim</th><th scope="col">Coded mechanism</th><th scope="col">Group</th></tr></thead><tbody>
+<tr><th scope="row">Lowering error</th><td class="lft">Rope Too Short For Climb</td><td class="lft">Rope too short for the pitch</td><td class="lft dim">Rappelling and lowering</td></tr>
+<tr><th scope="row">Lowering error</th><td class="lft">Belayer Pulled Into Rock, No Helmet</td><td class="lft">Belayer pulled off station, No helmet</td><td class="lft dim">Rappelling and lowering</td></tr>
+<tr><th scope="row">Lowering error</th><td class="lft">Rope Pulled Through Device, No Helmet</td><td class="lft">Lost control of the brake strand, No helmet</td><td class="lft dim">Rappelling and lowering</td></tr>
+<tr><th scope="row">Lowering error</th><td class="lft">No Stopper Knot</td><td class="lft">No knot in the rope ends</td><td class="lft dim">Rappelling and lowering</td></tr>
+<tr><th scope="row">Lowering error</th><td class="lft">Rope Too Short, Inattention</td><td class="lft">Rope too short for the pitch, Inattentive or inadequate belay</td><td class="lft dim">Rappelling and lowering</td></tr>
+<tr><th scope="row">Lowering errors</th><td class="lft">Ropes Too Short, No Helmet</td><td class="lft">Rope too short for the pitch, No helmet</td><td class="lft dim">Rappelling and lowering</td></tr>
+<tr><th scope="row">Rappel anchor failure</th><td class="lft">Trusting Old Gear</td><td class="lft">Trusted old fixed anchor</td><td class="lft dim">Rappelling and lowering</td></tr>
+<tr><th scope="row">Rappel error</th><td class="lft">No Backups, No Helmet</td><td class="lft">No rappel backup or autoblock, No helmet</td><td class="lft dim">Rappelling and lowering</td></tr>
+<tr><th scope="row">Rappel error</th><td class="lft">Rappelled Off End of Rope in Storm</td><td class="lft">Rappelled off the rope ends</td><td class="lft dim">Rappelling and lowering</td></tr>
+<tr><th scope="row">Rappel error</th><td class="lft">Uneven Ropes, Inexperience, No Helmet</td><td class="lft">Uneven ropes, Inexperience, No helmet</td><td class="lft dim">Rappelling and lowering</td></tr>
+<tr><th scope="row">Rappel error</th><td class="lft">No Backup</td><td class="lft">No rappel backup or autoblock</td><td class="lft dim">Rappelling and lowering</td></tr>
+<tr><th scope="row">Rappel error</th><td class="lft">Uneven Ropes, No Stopper Knots</td><td class="lft">Uneven ropes, No knot in the rope ends</td><td class="lft dim">Rappelling and lowering</td></tr>
+<tr><th scope="row">Rappel error</th><td class="lft">Burned Hands</td><td class="lft">Lost control of the brake strand</td><td class="lft dim">Rappelling and lowering</td></tr>
+<tr><th scope="row">Rappel error</th><td class="lft">Uneven Ropes</td><td class="lft">Uneven ropes</td><td class="lft dim">Rappelling and lowering</td></tr>
+<tr><th scope="row">Simul-rappelling error</th><td class="lft">No Backups</td><td class="lft">No rappel backup or autoblock</td><td class="lft dim">Rappelling and lowering</td></tr>
+<tr><th scope="row">Anchor failure</th><td class="lft">Inadequate Communication and Teamwork</td><td class="lft">Miscommunication</td><td class="lft dim">Roped falls on rock</td></tr>
+<tr><th scope="row">Belayer pulled into wall</th><td class="lft">Miscommunication</td><td class="lft">Miscommunication</td><td class="lft dim">Roped falls on rock</td></tr>
+<tr><th scope="row">Belayer pulled into wall</th><td class="lft">No Ground Anchor</td><td class="lft">Belayer pulled off station</td><td class="lft dim">Roped falls on rock</td></tr>
+<tr><th scope="row">Fall from anchor</th><td class="lft">Communication Problems</td><td class="lft">Miscommunication</td><td class="lft dim">Roped falls on rock</td></tr>
+<tr><th scope="row">Fall on rock</th><td class="lft">Speed Climbing, Inadequate Protection</td><td class="lft">Climbing for speed, Too little protection placed</td><td class="lft dim">Roped falls on rock</td></tr>
+<tr><th scope="row">Fall on rock</th><td class="lft">Communication Error, Taken Off Belay</td><td class="lft">Miscommunication, Taken off belay</td><td class="lft dim">Roped falls on rock</td></tr>
+<tr><th scope="row">Fall on rock</th><td class="lft">Failure to Clip Anchor</td><td class="lft">Failed to clip the anchor</td><td class="lft dim">Roped falls on rock</td></tr>
+<tr><th scope="row">Fall on rock</th><td class="lft">Off-Route</td><td class="lft">Off route</td><td class="lft dim">Roped falls on rock</td></tr>
+<tr><th scope="row">Fall on rock</th><td class="lft">Inadequate Protection</td><td class="lft">Too little protection placed</td><td class="lft dim">Roped falls on rock</td></tr>
+<tr><th scope="row">Fall on rock</th><td class="lft">Inattentive Belay</td><td class="lft">Inattentive or inadequate belay</td><td class="lft dim">Roped falls on rock</td></tr>
+<tr><th scope="row">Fall on rock</th><td class="lft">Loose Rock, Inadequate Protection</td><td class="lft">Loose rock or untested hold, Too little protection placed</td><td class="lft dim">Roped falls on rock</td></tr>
+<tr><th scope="row">Fall on rock</th><td class="lft">Inadequate Protection, Inexperience</td><td class="lft">Too little protection placed, Inexperience</td><td class="lft dim">Roped falls on rock</td></tr>
+<tr><th scope="row">Fatal fall from anchor</th><td class="lft">Miscommunication</td><td class="lft">Miscommunication</td><td class="lft dim">Roped falls on rock</td></tr>
+<tr><th scope="row">Fatal ground fall</th><td class="lft">Rope Likely Cut Over Edge</td><td class="lft">Rope cut or damaged</td><td class="lft dim">Roped falls on rock</td></tr>
+<tr><th scope="row">Ground fall</th><td class="lft">Protection Pulled Out</td><td class="lft">Protection pulled out</td><td class="lft dim">Roped falls on rock</td></tr>
+<tr><th scope="row">Ground fall</th><td class="lft">Inadequate Belay, No Helmet</td><td class="lft">Inattentive or inadequate belay, No helmet</td><td class="lft dim">Roped falls on rock</td></tr>
+<tr><th scope="row">Ground fall</th><td class="lft">Inadequate Protection</td><td class="lft">Too little protection placed</td><td class="lft dim">Roped falls on rock</td></tr>
+<tr><th scope="row">Ground fall</th><td class="lft">Protection Pulled Out, No Helmet</td><td class="lft">Protection pulled out, No helmet</td><td class="lft dim">Roped falls on rock</td></tr>
+<tr><th scope="row">Ground fall</th><td class="lft">Quickdraw Unclipped From Bolt</td><td class="lft">Quickdraw unclipped itself</td><td class="lft dim">Roped falls on rock</td></tr>
+<tr><th scope="row">Ground fall from anchor</th><td class="lft">Miscommunication</td><td class="lft">Miscommunication</td><td class="lft dim">Roped falls on rock</td></tr>
+<tr><th scope="row">Ground fall from anchors</th><td class="lft">Miscommunication</td><td class="lft">Miscommunication</td><td class="lft dim">Roped falls on rock</td></tr>
+<tr><th scope="row">Leader fall</th><td class="lft">Inexperience, Inadequate Belay</td><td class="lft">Inexperience, Inattentive or inadequate belay</td><td class="lft dim">Roped falls on rock</td></tr>
+<tr><th scope="row">Leader fall onto ledge</th><td class="lft">Inexperience</td><td class="lft">Inexperience</td><td class="lft dim">Roped falls on rock</td></tr>
+<tr><th scope="row">Ledge fall</th><td class="lft">Off-Route, Inadequate Protection</td><td class="lft">Off route, Too little protection placed</td><td class="lft dim">Roped falls on rock</td></tr>
+<tr><th scope="row">Roped-soloing fall</th><td class="lft">Protection Pulled Out</td><td class="lft">Protection pulled out</td><td class="lft dim">Roped falls on rock</td></tr>
+<tr><th scope="row">Crevasse fall</th><td class="lft">Climbing Unroped</td><td class="lft">Climbing unroped</td><td class="lft dim">Snow, ice and glacier</td></tr>
+<tr><th scope="row">Crevasse fall and 16-hour rescue</th><td class="lft">Climbing Unroped</td><td class="lft">Climbing unroped</td><td class="lft dim">Snow, ice and glacier</td></tr>
+<tr><th scope="row">Fall on ice</th><td class="lft">Transition Error, Inexperience</td><td class="lft">Error at a transition, Inexperience</td><td class="lft dim">Snow, ice and glacier</td></tr>
+<tr><th scope="row">Fall on ice</th><td class="lft">Inadequate Tool Placements</td><td class="lft">Bad tool or screw placement</td><td class="lft dim">Snow, ice and glacier</td></tr>
+<tr><th scope="row">Fall on ice</th><td class="lft">Fatigue, Dehydration</td><td class="lft">Fatigue, Dehydration</td><td class="lft dim">Snow, ice and glacier</td></tr>
+<tr><th scope="row">Fall on ice</th><td class="lft">Failure to Self-Arrest, Inadequate Equipment</td><td class="lft">Could not self-arrest, Inadequate equipment</td><td class="lft dim">Snow, ice and glacier</td></tr>
+<tr><th scope="row">Fall on snow</th><td class="lft">Inexperience, Poor Snow Conditions</td><td class="lft">Inexperience, Poor snow or ice conditions</td><td class="lft dim">Snow, ice and glacier</td></tr>
+<tr><th scope="row">Fall on snow</th><td class="lft">Fatigue, Poor Snow Conditions</td><td class="lft">Fatigue, Poor snow or ice conditions</td><td class="lft dim">Snow, ice and glacier</td></tr>
+<tr><th scope="row">Fall on snow</th><td class="lft">Failure to Self-Arrest, Loss of Equipment</td><td class="lft">Could not self-arrest, Dropped or lost equipment</td><td class="lft dim">Snow, ice and glacier</td></tr>
+<tr><th scope="row">Fall on snow</th><td class="lft">Not Wearing Crampons, Failure to Self-Arrest</td><td class="lft">Crampons not worn, Could not self-arrest</td><td class="lft dim">Snow, ice and glacier</td></tr>
+<tr><th scope="row">Ski mountaineering</th><td class="lft">Off-Route, Unable to Self-Arrest</td><td class="lft">Off route, Could not self-arrest</td><td class="lft dim">Snow, ice and glacier</td></tr>
+<tr><th scope="row">Rockfall</th><td class="lft">Off-Route, Crowds</td><td class="lft">Off route, Crowding at the crag</td><td class="lft dim">Stranded, lost and rockfall</td></tr>
+<tr><th scope="row">Rockfall, anchor failure</th><td class="lft">Overcrowding, Inexperience</td><td class="lft">Crowding at the crag, Inexperience</td><td class="lft dim">Stranded, lost and rockfall</td></tr>
+<tr><th scope="row">Stranded</th><td class="lft">Failure to Rappel, Inexperience</td><td class="lft">Chose not to rappel / stuck, Inexperience</td><td class="lft dim">Stranded, lost and rockfall</td></tr>
+<tr><th scope="row">Stranded</th><td class="lft">Suspected Hypothermia</td><td class="lft">Hypothermia</td><td class="lft dim">Stranded, lost and rockfall</td></tr>
+<tr><th scope="row">Stranded</th><td class="lft">Off Route</td><td class="lft">Off route</td><td class="lft dim">Stranded, lost and rockfall</td></tr>
+<tr><th scope="row">Stranded</th><td class="lft">Off-Route, Benighted</td><td class="lft">Off route, Caught out after dark</td><td class="lft dim">Stranded, lost and rockfall</td></tr>
+<tr><th scope="row">Stranded in midair</th><td class="lft">Inadequate Protection</td><td class="lft">Too little protection placed</td><td class="lft dim">Stranded, lost and rockfall</td></tr>
+<tr><th scope="row">Capitol Peak fatalities</th><td class="lft">Off-Route, Inexperience</td><td class="lft">Off route, Inexperience</td><td class="lft dim">Unroped and uncertain</td></tr>
+<tr><th scope="row">Fatal fall</th><td class="lft">Possible Rappel Error</td><td class="lft">Mechanism never established</td><td class="lft dim">Unroped and uncertain</td></tr>
+<tr><th scope="row">Fatal fall</th><td class="lft">Unroped Scrambling During Descent</td><td class="lft">Climbing unroped</td><td class="lft dim">Unroped and uncertain</td></tr>
+</tbody></table></div>
+</section>
+
+<section>
+  <h2>The mix has shifted under the cumulative totals</h2>
+  <p class="lede">The cumulative column is dominated by decades when the reports were mostly about mountaineering.
+  Comparing each cause's share of the whole series against its share of one recent year shows which entries are
+  historical and which are live. The 2017 column is 186 accidents, so this is a direction, not a measurement.</p>
+  <figure class="plot grouped" id="c-shift" role="group" aria-label="Share of accidents by cause, 1951 to 2016 compared with 2017 alone">
+<div class="legend"><span class="key"><i class="sw s1"></i>1951&ndash;2016 cumulative</span><span class="key"><i class="sw s2"></i>2017 alone</span></div>
+<div class="glwrap" aria-hidden="true"><div class="gl" style="left:0.00%"></div><div class="gl" style="left:19.50%"></div><div class="gl" style="left:39.00%"></div><div class="gl" style="left:58.50%"></div><div class="gl" style="left:78.00%"></div></div>
+<div class="plotrows">
+<div class="row grow" tabindex="0" data-tip="Failed to follow route or directions &middot; 1951&ndash;2016: 1.3% of accidents (116 tags) &middot; 2017: 9.1% (17 tags) &middot; 6.8&times;"><div class="rlab">Failed to follow route or directions</div><div class="rtrack"><div class="gbar"><div class="rbar s1" style="width:5.20%"></div><span class="rval">1.3%</span></div><div class="gbar"><div class="rbar s2" style="width:35.65%"></div><span class="rval">9.1%</span></div></div><div class="rdelta up">&uarr;&nbsp;6.8&times;</div></div>
+<div class="row grow" tabindex="0" data-tip="Rappel &amp; lowering error &middot; 1951&ndash;2016: 5.5% of accidents (476 tags) &middot; 2017: 16.1% (30 tags) &middot; 2.9&times;"><div class="rlab">Rappel &amp; lowering error</div><div class="rtrack"><div class="gbar"><div class="rbar s1" style="width:21.36%"></div><span class="rval">5.5%</span></div><div class="gbar"><div class="rbar s2" style="width:62.90%"></div><span class="rval">16.1%</span></div></div><div class="rdelta up">&uarr;&nbsp;2.9&times;</div></div>
+<div class="row grow" tabindex="0" data-tip="Loose rock / failed to test holds &middot; 1951&ndash;2016: 2.0% of accidents (178 tags) &middot; 2017: 5.9% (11 tags) &middot; 2.9&times;"><div class="rlab">Loose rock / failed to test holds</div><div class="rtrack"><div class="gbar"><div class="rbar s1" style="width:7.99%"></div><span class="rval">2.0%</span></div><div class="gbar"><div class="rbar s2" style="width:23.06%"></div><span class="rval">5.9%</span></div></div><div class="rdelta up">&uarr;&nbsp;2.9&times;</div></div>
+<div class="row grow" tabindex="0" data-tip="Nut or cam pulled out &middot; 1951&ndash;2016: 3.2% of accidents (277 tags) &middot; 2017: 7.0% (13 tags) &middot; 2.2&times;"><div class="rlab">Nut or cam pulled out</div><div class="rtrack"><div class="gbar"><div class="rbar s1" style="width:12.43%"></div><span class="rval">3.2%</span></div><div class="gbar"><div class="rbar s2" style="width:27.26%"></div><span class="rval">7.0%</span></div></div><div class="rdelta up">&uarr;&nbsp;2.2&times;</div></div>
+<div class="row grow" tabindex="0" data-tip="Poor position &middot; 1951&ndash;2016: 3.2% of accidents (281 tags) &middot; 2017: 4.8% (9 tags) &middot; 1.5&times;"><div class="rlab">Poor position</div><div class="rtrack"><div class="gbar"><div class="rbar s1" style="width:12.61%"></div><span class="rval">3.2%</span></div><div class="gbar"><div class="rbar s2" style="width:18.87%"></div><span class="rval">4.8%</span></div></div><div class="rdelta up">&uarr;&nbsp;1.5&times;</div></div>
+<div class="row grow" tabindex="0" data-tip="Inadequate belay &middot; 1951&ndash;2016: 3.8% of accidents (332 tags) &middot; 2017: 4.3% (8 tags) &middot; 1.1&times;"><div class="rlab">Inadequate belay</div><div class="rtrack"><div class="gbar"><div class="rbar s1" style="width:14.89%"></div><span class="rval">3.8%</span></div><div class="gbar"><div class="rbar s2" style="width:16.77%"></div><span class="rval">4.3%</span></div></div><div class="rdelta flat">&rarr;&nbsp;1.1&times;</div></div>
+<div class="row grow" tabindex="0" data-tip="Exceeding abilities / inexperience &middot; 1951&ndash;2016: 14.5% of accidents (1,263 tags) &middot; 2017: 9.1% (17 tags) &middot; 0.6&times;"><div class="rlab">Exceeding abilities / inexperience</div><div class="rtrack"><div class="gbar"><div class="rbar s1" style="width:56.66%"></div><span class="rval">14.5%</span></div><div class="gbar"><div class="rbar s2" style="width:35.65%"></div><span class="rval">9.1%</span></div></div><div class="rdelta down">&darr;&nbsp;0.6&times;</div></div>
+<div class="row grow" tabindex="0" data-tip="No helmet &middot; 1951&ndash;2016: 5.3% of accidents (465 tags) &middot; 2017: 3.2% (6 tags) &middot; 0.6&times;"><div class="rlab">No helmet</div><div class="rtrack"><div class="gbar"><div class="rbar s1" style="width:20.86%"></div><span class="rval">5.3%</span></div><div class="gbar"><div class="rbar s2" style="width:12.58%"></div><span class="rval">3.2%</span></div></div><div class="rdelta down">&darr;&nbsp;0.6&times;</div></div>
+<div class="row grow" tabindex="0" data-tip="Placed no / inadequate protection &middot; 1951&ndash;2016: 11.9% of accidents (1,034 tags) &middot; 2017: 5.9% (11 tags) &middot; 0.5&times;"><div class="rlab">Placed no / inadequate protection</div><div class="rtrack"><div class="gbar"><div class="rbar s1" style="width:46.39%"></div><span class="rval">11.9%</span></div><div class="gbar"><div class="rbar s2" style="width:23.06%"></div><span class="rval">5.9%</span></div></div><div class="rdelta down">&darr;&nbsp;0.5&times;</div></div>
+<div class="row grow" tabindex="0" data-tip="Weather &middot; 1951&ndash;2016: 7.1% of accidents (618 tags) &middot; 2017: 2.7% (5 tags) &middot; 0.4&times;"><div class="rlab">Weather</div><div class="rtrack"><div class="gbar"><div class="rbar s1" style="width:27.73%"></div><span class="rval">7.1%</span></div><div class="gbar"><div class="rbar s2" style="width:10.48%"></div><span class="rval">2.7%</span></div></div><div class="rdelta down">&darr;&nbsp;0.4&times;</div></div>
+<div class="row grow" tabindex="0" data-tip="Climbing alone &middot; 1951&ndash;2016: 6.3% of accidents (544 tags) &middot; 2017: 1.6% (3 tags) &middot; 0.3&times;"><div class="rlab">Climbing alone</div><div class="rtrack"><div class="gbar"><div class="rbar s1" style="width:24.41%"></div><span class="rval">6.3%</span></div><div class="gbar"><div class="rbar s2" style="width:6.29%"></div><span class="rval">1.6%</span></div></div><div class="rdelta down">&darr;&nbsp;0.3&times;</div></div>
+<div class="row grow" tabindex="0" data-tip="Climbing unroped &middot; 1951&ndash;2016: 14.8% of accidents (1,284 tags) &middot; 2017: 3.2% (6 tags) &middot; 0.2&times;"><div class="rlab">Climbing unroped</div><div class="rtrack"><div class="gbar"><div class="rbar s1" style="width:57.60%"></div><span class="rval">14.8%</span></div><div class="gbar"><div class="rbar s2" style="width:12.58%"></div><span class="rval">3.2%</span></div></div><div class="rdelta down">&darr;&nbsp;0.2&times;</div></div>
+</div>
+<div class="axis" aria-hidden="true"><div class="tick" style="left:0.00%">0%</div><div class="tick" style="left:19.50%">5%</div><div class="tick" style="left:39.00%">10%</div><div class="tick" style="left:58.50%">15%</div><div class="tick" style="left:78.00%">20%</div></div>
+<figcaption>Each cause as a percentage of all reported accidents in its period. One year of data is a small sample, so read the direction, not the exact multiple.</figcaption>
+</figure>
+  <h3 style="margin-top:2.6rem">The modern profile</h3>
+  <p>Rising: everything to do with the transitions at the top and bottom of a pitch &mdash; rappelling, lowering,
+  belaying, finding the anchor, trusting a hold or a cam placement. Fading: everything to do with being alone,
+  unroped and far from the road. That is what you would expect from a sport whose centre of mass moved from
+  alpine routes to bolted and trad single pitches, and it means the historical ranking is a poor guide to what is
+  likely to hurt a climber today.</p>
+</section>
+
+<section>
+  <h2>Grouped into mistake families</h2>
+  <p class="lede">Related categories from both halves of Table III, collapsed. An accident can land in more than
+  one family, and a cause tagged as both immediate and contributory is counted twice, so these are upper bounds
+  on each family's footprint rather than a partition of the data.</p>
+  <div class="tblwrap"><table class="fam">
+    <caption>Cause families, ranked by cumulative tags</caption>
+    <thead><tr><th scope="col">Family</th><th scope="col">Tags <span>1951&ndash;2016</span></th>
+      <th scope="col">Share <span>of accidents</span></th><th scope="col">2017 <span>tags</span></th>
+      <th scope="col">2017 <span>share</span></th><th scope="col">Categories folded in</th></tr></thead>
+    <tbody><tr><th scope="row">Rope system not used or misused</th><td class="strong">2,160</td><td>24.8%</td><td>17</td><td>9.1%</td><td class="note">Climbing unroped, climbing alone, inadequate belay</td></tr>
+<tr><th scope="row">Skill and judgment gap</th><td class="strong">1,903</td><td>21.9%</td><td>18</td><td>9.7%</td><td class="note">Exceeding abilities / inexperience, counted as both immediate and contributory cause</td></tr>
+<tr><th scope="row">Protection or anchor placement failed</th><td class="strong">1,827</td><td>21.0%</td><td>26</td><td>14.0%</td><td class="note">No or inadequate protection; nut, cam, piton or ice screw pulled out</td></tr>
+<tr><th scope="row">Environment misread</th><td class="strong">1,546</td><td>17.8%</td><td>23</td><td>12.4%</td><td class="note">Weather, loose rock, darkness, avalanche, lightning</td></tr>
+<tr><th scope="row">Gear or clothing inadequate</th><td class="strong">1,358</td><td>15.6%</td><td>19</td><td>10.2%</td><td class="note">Inadequate equipment / clothing, no helmet, equipment failure</td></tr>
+<tr><th scope="row">Navigation and route-finding</th><td class="strong">892</td><td>10.3%</td><td>30</td><td>16.1%</td><td class="note">Failure to follow route, failed to follow directions, stranded / lost</td></tr>
+<tr><th scope="row">Descent-transition error</th><td class="strong">476</td><td>5.5%</td><td>30</td><td>16.1%</td><td class="note">Rappel failure / error, lowering error</td></tr></tbody>
+  </table></div>
+  <p style="margin-top:1.4rem;max-width:62ch;color:var(--fg2)">The ordering inverts almost completely between the
+  two columns. Over the full series the rope system and raw inexperience dominate; in the recent year,
+  route-finding and the rappel/lower transition are tagged more often than anything else, each in about one
+  accident in six.</p>
+</section>
+
+<section>
+  <h2>What independent analysis of the narratives adds</h2>
+  <p class="lede">The club's tables pick causes category by category but do not cross-tabulate, so they cannot say
+  which discipline a mistake belongs to. An investigation by <em>Climbing</em> re-tagged the accident
+  narratives themselves to get at that.</p>
+  <ul class="plain">
+    <li><b>2,770 narratives from 1990 onward were re-coded</b>, about 56% of the accidents the club logged for the
+    period &mdash; only published write-ups could be tagged.</li>
+    <li><b>Trad accounted for 63% of roped rock accidents</b> against 20% for sport and toprope combined, though
+    the gap has narrowed from roughly 5&times; in 1990&ndash;2009 to about 2&times; since.</li>
+    <li><b>Inadequate or pulled protection was tagged in 49% of trad incidents</b> &mdash; the single most
+    frequent factor for any style in that dataset, which matches where the club's own protection family lands.</li>
+    <li><b>About 32% of incidents happened on descent</b>, and rappel error was the leading descent factor at 29%;
+    no backup or end knot appeared in 12%.</li>
+    <li><b>Rappel error was tagged in 251 incidents, 76 of them fatal</b> &mdash; close to a 30% fatality rate,
+    which makes it the deadliest of the common factors rather than merely a frequent one.</li>
+    <li>On toprope, <b>anchor failure led</b>; in sport, <b>miscommunication</b> appeared in roughly 8%.</li>
+  </ul>
+  <div class="note-box">
+    <h3>The rappel trend has not turned around</h3>
+    <p>The club published 14 rappel accidents in 2023, 8 of them fatal, and the 2025 edition reports 15 rappel
+    incidents involving 23 climbers with 5 deaths. Anchor material is a recurring thread: webbing recovered from
+    a fatal 2022 rappel-anchor failure at Tahquitz Rock broke at 2.54&nbsp;kN, 3.56&nbsp;kN and 3.2&nbsp;kN in
+    three pull tests, against the 22&nbsp;kN a new sling is rated for.</p>
+  </div>
+</section>
+
+<section>
+  <h2>What this data cannot tell you</h2>
+  <ul class="plain">
+    <li><b>There is no denominator.</b> The tables count accidents, not accidents per climbing day. Nothing here
+    says trad is more dangerous than sport, or that September is risky; it says more reports arrive from those
+    conditions. Participation estimates exist for recent years only.</li>
+    <li><b>Reporting is voluntary and filtered twice.</b> Not every accident is reported, and not every report is
+    published. Gym accidents, bouldering and overuse injuries are badly under-represented, and the club notes
+    experienced climbers file reports more readily &mdash; which is the likeliest reason &ldquo;experienced&rdquo;
+    outnumbers &ldquo;none or little&rdquo; in the experience table.</li>
+    <li><b>The cumulative column is not a modern sample.</b> It is a 66-year aggregate, weighted toward an era with
+    different routes, gear and norms. For current risk, use recent single-year columns and accept the small-sample
+    noise.</li>
+    <li><b>Category definitions moved.</b> Lowering error arrived in 2016; the &ldquo;top or bottom of route&rdquo;
+    phase category arrived in 2001. The club also notes that the 1986 and 1997 editions repeated some prior-year
+    data, corrected later in the cumulative figures.</li>
+    <li><b>Some published cumulative rows do not survive inspection.</b> The age distribution in the 2018 edition
+    reports 1,249 accidents to climbers under 15 but only 436 to climbers over 50, and gives Canada 18 accidents
+    in the 31&ndash;35 band against 145 in 36&ndash;50. Those rows look like accumulated transcription errors;
+    the cause tables, which cross-check cleanly against earlier editions, do not share the problem. I have
+    reproduced the cause tables only.</li>
+  </ul>
+</section>
+
+<section>
+  <h2>Every number, as published</h2>
+  <p class="lede">The full Table III, including the &ldquo;other&rdquo; and &ldquo;unknown&rdquo; rows left out of
+  the charts above. Shares are against 8,693 cumulative accidents and 186 accidents in 2017.</p>
+  <div class="tblwrap"><table><caption>Table III, Contributory Causes &mdash; every category as published</caption><thead><tr><th scope="col">Category</th><th scope="col">U.S. <span>1951&ndash;2016</span></th><th scope="col">Canada <span>1959&ndash;2016</span></th><th scope="col">Total <span>N. America</span></th><th scope="col">Share <span>of accidents</span></th><th scope="col">2017 <span>only</span></th><th scope="col">2017 <span>share</span></th></tr></thead><tbody>
+<tr><th scope="row">Climbing unroped</th><td>1,110</td><td>174</td><td class="strong">1,284</td><td>14.8%</td><td>6</td><td>3.2%</td></tr>
+<tr><th scope="row">Exceeding abilities / inexperience</th><td>1,057</td><td>206</td><td class="strong">1,263</td><td>14.5%</td><td>17</td><td>9.1%</td></tr>
+<tr><th scope="row">Placed no / inadequate protection</th><td>929</td><td>105</td><td class="strong">1,034</td><td>11.9%</td><td>11</td><td>5.9%</td></tr>
+<tr><th scope="row">Inadequate equipment / clothing</th><td>769</td><td>74</td><td class="strong">843</td><td>9.7%</td><td>12</td><td>6.5%</td></tr>
+<tr><th scope="row">Weather</th><td>542</td><td>76</td><td class="strong">618</td><td>7.1%</td><td>5</td><td>2.7%</td></tr>
+<tr><th scope="row">Climbing alone</th><td>470</td><td>74</td><td class="strong">544</td><td>6.3%</td><td>3</td><td>1.6%</td></tr>
+<tr><th scope="row">No helmet</th><td>390</td><td>75</td><td class="strong">465</td><td>5.3%</td><td>6</td><td>3.2%</td></tr>
+<tr><th scope="row">Inadequate belay</th><td>303</td><td>29</td><td class="strong">332</td><td>3.8%</td><td>8</td><td>4.3%</td></tr>
+<tr><th scope="row">Poor position</th><td>253</td><td>28</td><td class="strong">281</td><td>3.2%</td><td>9</td><td>4.8%</td></tr>
+<tr><th scope="row">Nut / cam pulled out</th><td>244</td><td>33</td><td class="strong">277</td><td>3.2%</td><td>13</td><td>7.0%</td></tr>
+<tr><th scope="row">Darkness</th><td>185</td><td>23</td><td class="strong">208</td><td>2.4%</td><td>2</td><td>1.1%</td></tr>
+<tr><th scope="row">Loose rock / failure to test holds</th><td>131</td><td>47</td><td class="strong">178</td><td>2.0%</td><td>11</td><td>5.9%</td></tr>
+<tr><th scope="row">Party separated</th><td>139</td><td>12</td><td class="strong">151</td><td>1.7%</td><td>3</td><td>1.6%</td></tr>
+<tr><th scope="row">Failed to follow directions / route</th><td>98</td><td>18</td><td class="strong">116</td><td>1.3%</td><td>17</td><td>9.1%</td></tr>
+<tr><th scope="row">Piton / ice screw pulled out</th><td>87</td><td>15</td><td class="strong">102</td><td>1.2%</td><td>0</td><td>0.0%</td></tr>
+<tr><th scope="row">Exposure</th><td>68</td><td>16</td><td class="strong">84</td><td>1.0%</td><td>0</td><td>0.0%</td></tr>
+<tr><th scope="row">Illness</th><td>41</td><td>9</td><td class="strong">50</td><td>0.6%</td><td>2</td><td>1.1%</td></tr>
+<tr><th scope="row">Equipment failure</th><td>22</td><td>7</td><td class="strong">29</td><td>0.3%</td><td>1</td><td>0.5%</td></tr>
+<tr><th scope="row">Other</th><td>325</td><td>102</td><td class="strong">427</td><td>4.9%</td><td>2</td><td>1.1%</td></tr>
+</tbody></table></div>
+  <div class="tblwrap"><table><caption>Table III, Immediate Cause &mdash; every category as published</caption><thead><tr><th scope="col">Category</th><th scope="col">U.S. <span>1951&ndash;2016</span></th><th scope="col">Canada <span>1959&ndash;2016</span></th><th scope="col">Total <span>N. America</span></th><th scope="col">Share <span>of accidents</span></th><th scope="col">2017 <span>only</span></th><th scope="col">2017 <span>share</span></th></tr></thead><tbody>
+<tr><th scope="row">Fall or slip on rock</th><td>4,173</td><td>316</td><td class="strong">4,489</td><td>51.6%</td><td>62</td><td>33.3%</td></tr>
+<tr><th scope="row">Fall on snow or ice</th><td>1,194</td><td>221</td><td class="strong">1,415</td><td>16.3%</td><td>23</td><td>12.4%</td></tr>
+<tr><th scope="row">Falling rock, ice, or object</th><td>703</td><td>148</td><td class="strong">851</td><td>9.8%</td><td>13</td><td>7.0%</td></tr>
+<tr><th scope="row">Exceeding abilities / inexperience</th><td>604</td><td>36</td><td class="strong">640</td><td>7.4%</td><td>1</td><td>0.5%</td></tr>
+<tr><th scope="row">Illness</th><td>465</td><td>27</td><td class="strong">492</td><td>5.7%</td><td>5</td><td>2.7%</td></tr>
+<tr><th scope="row">Stranded / lost</th><td>418</td><td>63</td><td class="strong">481</td><td>5.5%</td><td>13</td><td>7.0%</td></tr>
+<tr><th scope="row">Rappel failure / error</th><td>414</td><td>55</td><td class="strong">469</td><td>5.4%</td><td>18</td><td>9.7%</td></tr>
+<tr><th scope="row">Avalanche</th><td>334</td><td>133</td><td class="strong">467</td><td>5.4%</td><td>5</td><td>2.7%</td></tr>
+<tr><th scope="row">Nut / cam pulled out</th><td>295</td><td>11</td><td class="strong">306</td><td>3.5%</td><td>2</td><td>1.1%</td></tr>
+<tr><th scope="row">Exposure</th><td>287</td><td>14</td><td class="strong">301</td><td>3.5%</td><td>0</td><td>0.0%</td></tr>
+<tr><th scope="row">Failure to follow route</th><td>259</td><td>36</td><td class="strong">295</td><td>3.4%</td><td>0</td><td>0.0%</td></tr>
+<tr><th scope="row">Loss of control / glissade</th><td>243</td><td>18</td><td class="strong">261</td><td>3.0%</td><td>3</td><td>1.6%</td></tr>
+<tr><th scope="row">Fall into crevasse / moat</th><td>190</td><td>52</td><td class="strong">242</td><td>2.8%</td><td>7</td><td>3.8%</td></tr>
+<tr><th scope="row">Faulty use of crampons</th><td>127</td><td>7</td><td class="strong">134</td><td>1.5%</td><td>0</td><td>0.0%</td></tr>
+<tr><th scope="row">Piton / ice screw pulled out</th><td>95</td><td>13</td><td class="strong">108</td><td>1.2%</td><td>0</td><td>0.0%</td></tr>
+<tr><th scope="row">Skiing (ski mountaineering)</th><td>73</td><td>14</td><td class="strong">87</td><td>1.0%</td><td>10</td><td>5.4%</td></tr>
+<tr><th scope="row">Ascending too fast</th><td>79</td><td>0</td><td class="strong">79</td><td>0.9%</td><td>1</td><td>0.5%</td></tr>
+<tr><th scope="row">Lightning</th><td>68</td><td>7</td><td class="strong">75</td><td>0.9%</td><td>0</td><td>0.0%</td></tr>
+<tr><th scope="row">Equipment failure</th><td>18</td><td>3</td><td class="strong">21</td><td>0.2%</td><td>0</td><td>0.0%</td></tr>
+<tr><th scope="row">Lowering error</th><td>6</td><td>1</td><td class="strong">7</td><td>0.1%</td><td>12</td><td>6.5%</td></tr>
+<tr><th scope="row">Other</th><td>631</td><td>39</td><td class="strong">670</td><td>7.7%</td><td>6</td><td>3.2%</td></tr>
+<tr><th scope="row">Unknown</th><td>73</td><td>10</td><td class="strong">83</td><td>1.0%</td><td>15</td><td>8.1%</td></tr>
+</tbody></table></div>
+  <div class="tblwrap"><table><caption>Table III, Terrain</caption><thead><tr><th scope="col">Category</th><th scope="col">U.S. <span>1951&ndash;2016</span></th><th scope="col">Canada <span>1959&ndash;2016</span></th><th scope="col">Total <span>N. America</span></th><th scope="col">Share <span>of accidents</span></th><th scope="col">2017 <span>only</span></th><th scope="col">2017 <span>share</span></th></tr></thead><tbody>
+<tr><th scope="row">Rock</th><td>5,358</td><td>578</td><td class="strong">5,936</td><td>68.3%</td><td>133</td><td>71.5%</td></tr>
+<tr><th scope="row">Snow</th><td>2,686</td><td>375</td><td class="strong">3,061</td><td>35.2%</td><td>44</td><td>23.7%</td></tr>
+<tr><th scope="row">Ice</th><td>311</td><td>23</td><td class="strong">334</td><td>3.8%</td><td>8</td><td>4.3%</td></tr>
+<tr><th scope="row">River</th><td>25</td><td>3</td><td class="strong">28</td><td>0.3%</td><td>0</td><td>0.0%</td></tr>
+<tr><th scope="row">Unknown</th><td>25</td><td>11</td><td class="strong">36</td><td>0.4%</td><td>1</td><td>0.5%</td></tr>
+</tbody></table></div>
+  <div class="tblwrap"><table><caption>Table III, Ascent or Descent</caption><thead><tr><th scope="col">Category</th><th scope="col">U.S. <span>1951&ndash;2016</span></th><th scope="col">Canada <span>1959&ndash;2016</span></th><th scope="col">Total <span>N. America</span></th><th scope="col">Share <span>of accidents</span></th><th scope="col">2017 <span>only</span></th><th scope="col">2017 <span>share</span></th></tr></thead><tbody>
+<tr><th scope="row">Ascent</th><td>4,295</td><td>631</td><td class="strong">4,926</td><td>56.7%</td><td>71</td><td>38.2%</td></tr>
+<tr><th scope="row">Descent</th><td>1,413</td><td>402</td><td class="strong">1,815</td><td>20.9%</td><td>70</td><td>37.6%</td></tr>
+<tr><th scope="row">At top or bottom of route</th><td>40</td><td>2</td><td class="strong">42</td><td>0.5%</td><td>8</td><td>4.3%</td></tr>
+<tr><th scope="row">Unknown</th><td>308</td><td>15</td><td class="strong">323</td><td>3.7%</td><td>37</td><td>19.9%</td></tr>
+</tbody></table></div>
+  <p style="margin-top:1.4rem;max-width:62ch;color:var(--fg2)">Terrain tags exceed the accident count because a
+  single accident can span rock and snow. The ascent/descent rows fall short of it because the phase was often not
+  recorded, and the 308 U.S. &ldquo;unknown&rdquo; entries are mostly solo climbers with no one left to interview.
+  Even so, descent accounts for 1,815 of the 6,783 accidents where the phase was recorded, and 70 of the 149
+  such accidents in 2017.</p>
+</section>
+
+<section>
+  <h2>Sources</h2>
+  <ul class="srcs">
+    <li><b>Accidents in North American Climbing 2018 (71st annual report)</b>
+    Data Tables I&ndash;III, pp. 122&ndash;127. The primary source for every cumulative figure on this page.
+    <a href="https://aac-publications.s3.amazonaws.com/publications_2018/AAC_Accidents2018.pdf">Full edition (PDF)</a></li>
+    <li><b>AAC Publications archive</b> Scanned annual reports back to 1948, including earlier printings of the
+    statistical tables used here to cross-check the cumulative columns.
+    <a href="http://publications.americanalpineclub.org/articles/13201011200/Reported-Mountaineering-Accidents-Table-III">Table III, 2010 edition</a></li>
+    <li><b>Rob Hess, &ldquo;Know the Ropes: Rappelling&rdquo;</b> ANAM 2012. The club's own breakdown of
+    rappelling accident causes for 2000&ndash;2011, and the source of the six-way split charted above.
+    <a href="https://aac-publications.s3.amazonaws.com/documents/anam/2012/PDF/ANAM_2012_10_2_002.pdf">Read the article (PDF)</a></li>
+    <li><b>&ldquo;Is Trad Climbing More Dangerous Than Sport Climbing?&rdquo;</b> <em>Climbing</em>. Re-tagging of
+    2,770 accident narratives from 1990 onward, by discipline and contributing factor.
+    <a href="https://www.climbing.com/skills/30-years-of-climbing-accident-data-an-investigative-report">Read the investigation</a></li>
+    <li><b>The Prescription: rappel fatalities</b> American Alpine Club, June 2025. Recent rappel counts and the
+    Tahquitz anchor-webbing pull tests.
+    <a href="https://americanalpineclub.org/news/2025/6/25/the-prescriptionrappel-fatalities">Read the column</a></li>
+  </ul>
+</section>
+
+</main>
+
+<footer>
+  <p>Charts drawn from the published tables; percentages computed against the accident counts in Table I.
+  Accidents in North American Climbing is published annually by the American Alpine Club and is the only
+  long-running accident record for the region. Reporting an accident is how the next edition gets better.</p>
+</footer>
+</div>
+
+<script>
+(function(){
+ var TREE={"id":"root","name":"Climbing accident data","view":"cards","children":[{"id":"con","name":"Contributory causes","value":8286,"blurb":"What the climber or party did, or failed to do. The mistakes column.","unit":"cause tags","period":"1951–2016","meta":"8,286 tags across 8,693 accidents","children":[{"id":"con-climbing-unroped","name":"Climbing unroped","value":1284,"meta":"U.S. 1,110 / Canada 174  ·  14.8% of accidents  ·  6 in 2017 (3.2%)"},{"id":"con-exceeding-abilities-inexperience","name":"Exceeding abilities / inexperience","value":1263,"meta":"U.S. 1,057 / Canada 206  ·  14.5% of accidents  ·  17 in 2017 (9.1%)"},{"id":"con-placed-no-inadequate-protection","name":"Placed no / inadequate protection","value":1034,"meta":"U.S. 929 / Canada 105  ·  11.9% of accidents  ·  11 in 2017 (5.9%)"},{"id":"con-inadequate-equipment-clothing","name":"Inadequate equipment / clothing","value":843,"meta":"U.S. 769 / Canada 74  ·  9.7% of accidents  ·  12 in 2017 (6.5%)"},{"id":"con-weather","name":"Weather","value":618,"meta":"U.S. 542 / Canada 76  ·  7.1% of accidents  ·  5 in 2017 (2.7%)"},{"id":"con-climbing-alone","name":"Climbing alone","value":544,"meta":"U.S. 470 / Canada 74  ·  6.3% of accidents  ·  3 in 2017 (1.6%)"},{"id":"con-no-helmet","name":"No helmet","value":465,"meta":"U.S. 390 / Canada 75  ·  5.3% of accidents  ·  6 in 2017 (3.2%)"},{"id":"con-other","name":"Other","value":427,"meta":"U.S. 325 / Canada 102  ·  4.9% of accidents  ·  2 in 2017 (1.1%)"},{"id":"con-inadequate-belay","name":"Inadequate belay","value":332,"meta":"U.S. 303 / Canada 29  ·  3.8% of accidents  ·  8 in 2017 (4.3%)"},{"id":"con-poor-position","name":"Poor position","value":281,"meta":"U.S. 253 / Canada 28  ·  3.2% of accidents  ·  9 in 2017 (4.8%)"},{"id":"con-nut-cam-pulled-out","name":"Nut / cam pulled out","value":277,"meta":"U.S. 244 / Canada 33  ·  3.2% of accidents  ·  13 in 2017 (7.0%)"},{"id":"con-darkness","name":"Darkness","value":208,"meta":"U.S. 185 / Canada 23  ·  2.4% of accidents  ·  2 in 2017 (1.1%)"},{"id":"con-loose-rock-failure-to-test-holds","name":"Loose rock / failure to test holds","value":178,"meta":"U.S. 131 / Canada 47  ·  2.0% of accidents  ·  11 in 2017 (5.9%)"},{"id":"con-party-separated","name":"Party separated","value":151,"meta":"U.S. 139 / Canada 12  ·  1.7% of accidents  ·  3 in 2017 (1.6%)"},{"id":"con-failed-to-follow-directions-route","name":"Failed to follow directions / route","value":116,"meta":"U.S. 98 / Canada 18  ·  1.3% of accidents  ·  17 in 2017 (9.1%)"},{"id":"con-piton-ice-screw-pulled-out","name":"Piton / ice screw pulled out","value":102,"meta":"U.S. 87 / Canada 15  ·  1.2% of accidents  ·  0 in 2017 (0.0%)"},{"id":"con-exposure","name":"Exposure","value":84,"meta":"U.S. 68 / Canada 16  ·  1.0% of accidents  ·  0 in 2017 (0.0%)"},{"id":"con-illness","name":"Illness","value":50,"meta":"U.S. 41 / Canada 9  ·  0.6% of accidents  ·  2 in 2017 (1.1%)"},{"id":"con-equipment-failure","name":"Equipment failure","value":29,"meta":"U.S. 22 / Canada 7  ·  0.3% of accidents  ·  1 in 2017 (0.5%)"}],"childUnit":"cause tags, U.S. + Canada"},{"id":"imm","name":"Immediate causes","value":11973,"blurb":"The physical event that caused the injury. Rappel failure drills down one more level.","unit":"cause tags","period":"1951–2016","meta":"11,973 tags across 8,693 accidents","children":[{"id":"imm-fall-or-slip-on-rock","name":"Fall or slip on rock","value":4489,"meta":"U.S. 4,173 / Canada 316  ·  51.6% of accidents  ·  62 in 2017 (33.3%)"},{"id":"imm-fall-on-snow-or-ice","name":"Fall on snow or ice","value":1415,"meta":"U.S. 1,194 / Canada 221  ·  16.3% of accidents  ·  23 in 2017 (12.4%)"},{"id":"imm-falling-rock-ice-or-object","name":"Falling rock, ice, or object","value":851,"meta":"U.S. 703 / Canada 148  ·  9.8% of accidents  ·  13 in 2017 (7.0%)"},{"id":"imm-other","name":"Other","value":670,"meta":"U.S. 631 / Canada 39  ·  7.7% of accidents  ·  6 in 2017 (3.2%)"},{"id":"imm-exceeding-abilities-inexperience","name":"Exceeding abilities / inexperience","value":640,"meta":"U.S. 604 / Canada 36  ·  7.4% of accidents  ·  1 in 2017 (0.5%)"},{"id":"imm-illness","name":"Illness","value":492,"meta":"U.S. 465 / Canada 27  ·  5.7% of accidents  ·  5 in 2017 (2.7%)"},{"id":"imm-stranded-lost","name":"Stranded / lost","value":481,"meta":"U.S. 418 / Canada 63  ·  5.5% of accidents  ·  13 in 2017 (7.0%)"},{"id":"imm-rappel-failure-error","name":"Rappel failure / error","value":469,"meta":"U.S. 414 / Canada 55  ·  5.4% of accidents  ·  18 in 2017 (9.7%)","children":[{"id":"rap-uneven-ropes-rappelled-off-the-end","name":"Uneven ropes, rappelled off the ends","value":29.0,"meta":"29.0% of rappelling accidents, 2000–2011"},{"id":"rap-inadequate-anchor-system","name":"Inadequate anchor system","value":25.8,"meta":"25.8% of rappelling accidents, 2000–2011"},{"id":"rap-inadequate-rappel-backup","name":"Inadequate rappel backup","value":19.4,"meta":"19.4% of rappelling accidents, 2000–2011"},{"id":"rap-poor-technique","name":"Poor technique","value":11.3,"meta":"11.3% of rappelling accidents, 2000–2011"},{"id":"rap-inadequate-equipment","name":"Inadequate equipment","value":9.7,"meta":"9.7% of rappelling accidents, 2000–2011"},{"id":"rap-unknown","name":"Unknown","value":4.8,"meta":"4.8% of rappelling accidents, 2000–2011"}],"childUnit":"% of rappelling accidents","childNote":"Different source and period: this is the club's own six-way split of every rappelling accident reported 2000–2011, from Know the Ropes 2012. The six shares sum to 100%, so they are not comparable with the tag counts one level up.","childMax":30},{"id":"imm-avalanche","name":"Avalanche","value":467,"meta":"U.S. 334 / Canada 133  ·  5.4% of accidents  ·  5 in 2017 (2.7%)"},{"id":"imm-nut-cam-pulled-out","name":"Nut / cam pulled out","value":306,"meta":"U.S. 295 / Canada 11  ·  3.5% of accidents  ·  2 in 2017 (1.1%)"},{"id":"imm-exposure","name":"Exposure","value":301,"meta":"U.S. 287 / Canada 14  ·  3.5% of accidents  ·  0 in 2017 (0.0%)"},{"id":"imm-failure-to-follow-route","name":"Failure to follow route","value":295,"meta":"U.S. 259 / Canada 36  ·  3.4% of accidents  ·  0 in 2017 (0.0%)"},{"id":"imm-loss-of-control-glissade","name":"Loss of control / glissade","value":261,"meta":"U.S. 243 / Canada 18  ·  3.0% of accidents  ·  3 in 2017 (1.6%)"},{"id":"imm-fall-into-crevasse-moat","name":"Fall into crevasse / moat","value":242,"meta":"U.S. 190 / Canada 52  ·  2.8% of accidents  ·  7 in 2017 (3.8%)"},{"id":"imm-faulty-use-of-crampons","name":"Faulty use of crampons","value":134,"meta":"U.S. 127 / Canada 7  ·  1.5% of accidents  ·  0 in 2017 (0.0%)"},{"id":"imm-piton-ice-screw-pulled-out","name":"Piton / ice screw pulled out","value":108,"meta":"U.S. 95 / Canada 13  ·  1.2% of accidents  ·  0 in 2017 (0.0%)"},{"id":"imm-skiing-ski-mountaineering","name":"Skiing (ski mountaineering)","value":87,"meta":"U.S. 73 / Canada 14  ·  1.0% of accidents  ·  10 in 2017 (5.4%)"},{"id":"imm-unknown","name":"Unknown","value":83,"meta":"U.S. 73 / Canada 10  ·  1.0% of accidents  ·  15 in 2017 (8.1%)"},{"id":"imm-ascending-too-fast","name":"Ascending too fast","value":79,"meta":"U.S. 79 / Canada 0  ·  0.9% of accidents  ·  1 in 2017 (0.5%)"},{"id":"imm-lightning","name":"Lightning","value":75,"meta":"U.S. 68 / Canada 7  ·  0.9% of accidents  ·  0 in 2017 (0.0%)"},{"id":"imm-equipment-failure","name":"Equipment failure","value":21,"meta":"U.S. 18 / Canada 3  ·  0.2% of accidents  ·  0 in 2017 (0.0%)"},{"id":"imm-lowering-error","name":"Lowering error","value":7,"meta":"U.S. 6 / Canada 1  ·  0.1% of accidents  ·  12 in 2017 (6.5%)"}],"childUnit":"cause tags, U.S. + Canada"},{"id":"ed18","name":"2018 edition, report by report","value":61,"blurb":"Every published report for 2017, coded from its headline tags. Drills down to the individual accidents.","unit":"published reports","period":"2017","meta":"61 reports, 90 tags","children":[{"id":"ed-roped-falls-on-rock","name":"Roped falls on rock","value":25,"meta":"25 published reports","children":[{"id":"roped-fall-miscommunication","name":"Miscommunication","value":7,"kind":"mechanism","meta":"7 of the 25 reports in this group","reports":[{"event":"Anchor failure","tags":"Inadequate Communication and Teamwork"},{"event":"Fall on rock","tags":"Communication Error, Taken Off Belay"},{"event":"Fall from anchor","tags":"Communication Problems"},{"event":"Belayer pulled into wall","tags":"Miscommunication"},{"event":"Fatal fall from anchor","tags":"Miscommunication"},{"event":"Ground fall from anchor","tags":"Miscommunication"},{"event":"Ground fall from anchors","tags":"Miscommunication"}]},{"id":"roped-fall-too-little-protection-placed","name":"Too little protection placed","value":6,"kind":"mechanism","meta":"6 of the 25 reports in this group","reports":[{"event":"Fall on rock","tags":"Speed Climbing, Inadequate Protection"},{"event":"Ledge fall","tags":"Off-Route, Inadequate Protection"},{"event":"Ground fall","tags":"Inadequate Protection"},{"event":"Fall on rock","tags":"Inadequate Protection"},{"event":"Fall on rock","tags":"Loose Rock, Inadequate Protection"},{"event":"Fall on rock","tags":"Inadequate Protection, Inexperience"}]},{"id":"roped-fall-protection-pulled-out","name":"Protection pulled out","value":3,"kind":"mechanism","meta":"3 of the 25 reports in this group","reports":[{"event":"Roped-soloing fall","tags":"Protection Pulled Out"},{"event":"Ground fall","tags":"Protection Pulled Out"},{"event":"Ground fall","tags":"Protection Pulled Out, No Helmet"}]},{"id":"roped-fall-inexperience","name":"Inexperience","value":3,"kind":"background","meta":"3 of the 25 reports in this group","reports":[{"event":"Leader fall","tags":"Inexperience, Inadequate Belay"},{"event":"Fall on rock","tags":"Inadequate Protection, Inexperience"},{"event":"Leader fall onto ledge","tags":"Inexperience"}]},{"id":"roped-fall-inattentive-or-inadequate-belay","name":"Inattentive or inadequate belay","value":3,"kind":"mechanism","meta":"3 of the 25 reports in this group","reports":[{"event":"Leader fall","tags":"Inexperience, Inadequate Belay"},{"event":"Ground fall","tags":"Inadequate Belay, No Helmet"},{"event":"Fall on rock","tags":"Inattentive Belay"}]},{"id":"roped-fall-off-route","name":"Off route","value":2,"kind":"mechanism","meta":"2 of the 25 reports in this group","reports":[{"event":"Ledge fall","tags":"Off-Route, Inadequate Protection"},{"event":"Fall on rock","tags":"Off-Route"}]},{"id":"roped-fall-no-helmet","name":"No helmet","value":2,"kind":"background","meta":"2 of the 25 reports in this group","reports":[{"event":"Ground fall","tags":"Inadequate Belay, No Helmet"},{"event":"Ground fall","tags":"Protection Pulled Out, No Helmet"}]},{"id":"roped-fall-climbing-for-speed","name":"Climbing for speed","value":1,"kind":"background","meta":"1 of the 25 reports in this group","reports":[{"event":"Fall on rock","tags":"Speed Climbing, Inadequate Protection"}]},{"id":"roped-fall-rope-cut-or-damaged","name":"Rope cut or damaged","value":1,"kind":"mechanism","meta":"1 of the 25 reports in this group","reports":[{"event":"Fatal ground fall","tags":"Rope Likely Cut Over Edge"}]},{"id":"roped-fall-taken-off-belay","name":"Taken off belay","value":1,"kind":"mechanism","meta":"1 of the 25 reports in this group","reports":[{"event":"Fall on rock","tags":"Communication Error, Taken Off Belay"}]},{"id":"roped-fall-failed-to-clip-the-anchor","name":"Failed to clip the anchor","value":1,"kind":"mechanism","meta":"1 of the 25 reports in this group","reports":[{"event":"Fall on rock","tags":"Failure to Clip Anchor"}]},{"id":"roped-fall-loose-rock-or-untested-hold","name":"Loose rock or untested hold","value":1,"kind":"mechanism","meta":"1 of the 25 reports in this group","reports":[{"event":"Fall on rock","tags":"Loose Rock, Inadequate Protection"}]},{"id":"roped-fall-quickdraw-unclipped-itself","name":"Quickdraw unclipped itself","value":1,"kind":"mechanism","meta":"1 of the 25 reports in this group","reports":[{"event":"Ground fall","tags":"Quickdraw Unclipped From Bolt"}]},{"id":"roped-fall-belayer-pulled-off-station","name":"Belayer pulled off station","value":1,"kind":"mechanism","meta":"1 of the 25 reports in this group","reports":[{"event":"Belayer pulled into wall","tags":"No Ground Anchor"}]}],"childUnit":"reports carrying the tag","childNote":"Blue bars are mechanisms (how the accident happened); orange bars are background factors (what made it likely or worse). A report can carry several tags."},{"id":"ed-rappelling-and-lowering","name":"Rappelling and lowering","value":15,"meta":"15 published reports","children":[{"id":"rappelling-no-helmet","name":"No helmet","value":5,"kind":"background","meta":"5 of the 15 reports in this group","reports":[{"event":"Rappel error","tags":"No Backups, No Helmet"},{"event":"Lowering errors","tags":"Ropes Too Short, No Helmet"},{"event":"Lowering error","tags":"Belayer Pulled Into Rock, No Helmet"},{"event":"Lowering error","tags":"Rope Pulled Through Device, No Helmet"},{"event":"Rappel error","tags":"Uneven Ropes, Inexperience, No Helmet"}]},{"id":"rappelling-rope-too-short-for-the-pitch","name":"Rope too short for the pitch","value":3,"kind":"mechanism","meta":"3 of the 15 reports in this group","reports":[{"event":"Lowering error","tags":"Rope Too Short For Climb"},{"event":"Lowering errors","tags":"Ropes Too Short, No Helmet"},{"event":"Lowering error","tags":"Rope Too Short, Inattention"}]},{"id":"rappelling-no-rappel-backup-or-autoblock","name":"No rappel backup or autoblock","value":3,"kind":"mechanism","meta":"3 of the 15 reports in this group","reports":[{"event":"Rappel error","tags":"No Backups, No Helmet"},{"event":"Rappel error","tags":"No Backup"},{"event":"Simul-rappelling error","tags":"No Backups"}]},{"id":"rappelling-uneven-ropes","name":"Uneven ropes","value":3,"kind":"mechanism","meta":"3 of the 15 reports in this group","reports":[{"event":"Rappel error","tags":"Uneven Ropes, Inexperience, No Helmet"},{"event":"Rappel error","tags":"Uneven Ropes, No Stopper Knots"},{"event":"Rappel error","tags":"Uneven Ropes"}]},{"id":"rappelling-lost-control-of-the-brake-strand","name":"Lost control of the brake strand","value":2,"kind":"mechanism","meta":"2 of the 15 reports in this group","reports":[{"event":"Lowering error","tags":"Rope Pulled Through Device, No Helmet"},{"event":"Rappel error","tags":"Burned Hands"}]},{"id":"rappelling-no-knot-in-the-rope-ends","name":"No knot in the rope ends","value":2,"kind":"mechanism","meta":"2 of the 15 reports in this group","reports":[{"event":"Rappel error","tags":"Uneven Ropes, No Stopper Knots"},{"event":"Lowering error","tags":"No Stopper Knot"}]},{"id":"rappelling-rappelled-off-the-rope-ends","name":"Rappelled off the rope ends","value":1,"kind":"mechanism","meta":"1 of the 15 reports in this group","reports":[{"event":"Rappel error","tags":"Rappelled Off End of Rope in Storm"}]},{"id":"rappelling-belayer-pulled-off-station","name":"Belayer pulled off station","value":1,"kind":"mechanism","meta":"1 of the 15 reports in this group","reports":[{"event":"Lowering error","tags":"Belayer Pulled Into Rock, No Helmet"}]},{"id":"rappelling-inexperience","name":"Inexperience","value":1,"kind":"background","meta":"1 of the 15 reports in this group","reports":[{"event":"Rappel error","tags":"Uneven Ropes, Inexperience, No Helmet"}]},{"id":"rappelling-trusted-old-fixed-anchor","name":"Trusted old fixed anchor","value":1,"kind":"mechanism","meta":"1 of the 15 reports in this group","reports":[{"event":"Rappel anchor failure","tags":"Trusting Old Gear"}]},{"id":"rappelling-inattentive-or-inadequate-belay","name":"Inattentive or inadequate belay","value":1,"kind":"mechanism","meta":"1 of the 15 reports in this group","reports":[{"event":"Lowering error","tags":"Rope Too Short, Inattention"}]}],"childUnit":"reports carrying the tag","childNote":"Blue bars are mechanisms (how the accident happened); orange bars are background factors (what made it likely or worse). A report can carry several tags."},{"id":"ed-snow-ice-and-glacier","name":"Snow, ice and glacier","value":11,"meta":"11 published reports","children":[{"id":"snow-ice-a-could-not-self-arrest","name":"Could not self-arrest","value":4,"kind":"mechanism","meta":"4 of the 11 reports in this group","reports":[{"event":"Fall on ice","tags":"Failure to Self-Arrest, Inadequate Equipment"},{"event":"Ski mountaineering","tags":"Off-Route, Unable to Self-Arrest"},{"event":"Fall on snow","tags":"Failure to Self-Arrest, Loss of Equipment"},{"event":"Fall on snow","tags":"Not Wearing Crampons, Failure to Self-Arrest"}]},{"id":"snow-ice-a-climbing-unroped","name":"Climbing unroped","value":2,"kind":"mechanism","meta":"2 of the 11 reports in this group","reports":[{"event":"Crevasse fall and 16-hour rescue","tags":"Climbing Unroped"},{"event":"Crevasse fall","tags":"Climbing Unroped"}]},{"id":"snow-ice-a-inexperience","name":"Inexperience","value":2,"kind":"background","meta":"2 of the 11 reports in this group","reports":[{"event":"Fall on ice","tags":"Transition Error, Inexperience"},{"event":"Fall on snow","tags":"Inexperience, Poor Snow Conditions"}]},{"id":"snow-ice-a-fatigue","name":"Fatigue","value":2,"kind":"background","meta":"2 of the 11 reports in this group","reports":[{"event":"Fall on ice","tags":"Fatigue, Dehydration"},{"event":"Fall on snow","tags":"Fatigue, Poor Snow Conditions"}]},{"id":"snow-ice-a-poor-snow-or-ice-conditions","name":"Poor snow or ice conditions","value":2,"kind":"background","meta":"2 of the 11 reports in this group","reports":[{"event":"Fall on snow","tags":"Inexperience, Poor Snow Conditions"},{"event":"Fall on snow","tags":"Fatigue, Poor Snow Conditions"}]},{"id":"snow-ice-a-error-at-a-transition","name":"Error at a transition","value":1,"kind":"mechanism","meta":"1 of the 11 reports in this group","reports":[{"event":"Fall on ice","tags":"Transition Error, Inexperience"}]},{"id":"snow-ice-a-bad-tool-or-screw-placement","name":"Bad tool or screw placement","value":1,"kind":"mechanism","meta":"1 of the 11 reports in this group","reports":[{"event":"Fall on ice","tags":"Inadequate Tool Placements"}]},{"id":"snow-ice-a-dehydration","name":"Dehydration","value":1,"kind":"background","meta":"1 of the 11 reports in this group","reports":[{"event":"Fall on ice","tags":"Fatigue, Dehydration"}]},{"id":"snow-ice-a-inadequate-equipment","name":"Inadequate equipment","value":1,"kind":"background","meta":"1 of the 11 reports in this group","reports":[{"event":"Fall on ice","tags":"Failure to Self-Arrest, Inadequate Equipment"}]},{"id":"snow-ice-a-off-route","name":"Off route","value":1,"kind":"mechanism","meta":"1 of the 11 reports in this group","reports":[{"event":"Ski mountaineering","tags":"Off-Route, Unable to Self-Arrest"}]},{"id":"snow-ice-a-dropped-or-lost-equipment","name":"Dropped or lost equipment","value":1,"kind":"mechanism","meta":"1 of the 11 reports in this group","reports":[{"event":"Fall on snow","tags":"Failure to Self-Arrest, Loss of Equipment"}]},{"id":"snow-ice-a-crampons-not-worn","name":"Crampons not worn","value":1,"kind":"mechanism","meta":"1 of the 11 reports in this group","reports":[{"event":"Fall on snow","tags":"Not Wearing Crampons, Failure to Self-Arrest"}]}],"childUnit":"reports carrying the tag","childNote":"Blue bars are mechanisms (how the accident happened); orange bars are background factors (what made it likely or worse). A report can carry several tags."},{"id":"ed-stranded-lost-and-rockfall","name":"Stranded, lost and rockfall","value":7,"meta":"7 published reports","children":[{"id":"stranded-l-off-route","name":"Off route","value":3,"kind":"mechanism","meta":"3 of the 7 reports in this group","reports":[{"event":"Rockfall","tags":"Off-Route, Crowds"},{"event":"Stranded","tags":"Off Route"},{"event":"Stranded","tags":"Off-Route, Benighted"}]},{"id":"stranded-l-inexperience","name":"Inexperience","value":2,"kind":"background","meta":"2 of the 7 reports in this group","reports":[{"event":"Stranded","tags":"Failure to Rappel, Inexperience"},{"event":"Rockfall, anchor failure","tags":"Overcrowding, Inexperience"}]},{"id":"stranded-l-crowding-at-the-crag","name":"Crowding at the crag","value":2,"kind":"background","meta":"2 of the 7 reports in this group","reports":[{"event":"Rockfall, anchor failure","tags":"Overcrowding, Inexperience"},{"event":"Rockfall","tags":"Off-Route, Crowds"}]},{"id":"stranded-l-chose-not-to-rappel-stuck","name":"Chose not to rappel / stuck","value":1,"kind":"mechanism","meta":"1 of the 7 reports in this group","reports":[{"event":"Stranded","tags":"Failure to Rappel, Inexperience"}]},{"id":"stranded-l-too-little-protection-placed","name":"Too little protection placed","value":1,"kind":"mechanism","meta":"1 of the 7 reports in this group","reports":[{"event":"Stranded in midair","tags":"Inadequate Protection"}]},{"id":"stranded-l-hypothermia","name":"Hypothermia","value":1,"kind":"background","meta":"1 of the 7 reports in this group","reports":[{"event":"Stranded","tags":"Suspected Hypothermia"}]},{"id":"stranded-l-caught-out-after-dark","name":"Caught out after dark","value":1,"kind":"background","meta":"1 of the 7 reports in this group","reports":[{"event":"Stranded","tags":"Off-Route, Benighted"}]}],"childUnit":"reports carrying the tag","childNote":"Blue bars are mechanisms (how the accident happened); orange bars are background factors (what made it likely or worse). A report can carry several tags."},{"id":"ed-unroped-and-uncertain","name":"Unroped and uncertain","value":3,"meta":"3 published reports","children":[{"id":"unroped-an-mechanism-never-established","name":"Mechanism never established","value":1,"kind":"mechanism","meta":"1 of the 3 reports in this group","reports":[{"event":"Fatal fall","tags":"Possible Rappel Error"}]},{"id":"unroped-an-off-route","name":"Off route","value":1,"kind":"mechanism","meta":"1 of the 3 reports in this group","reports":[{"event":"Capitol Peak fatalities","tags":"Off-Route, Inexperience"}]},{"id":"unroped-an-inexperience","name":"Inexperience","value":1,"kind":"background","meta":"1 of the 3 reports in this group","reports":[{"event":"Capitol Peak fatalities","tags":"Off-Route, Inexperience"}]},{"id":"unroped-an-climbing-unroped","name":"Climbing unroped","value":1,"kind":"mechanism","meta":"1 of the 3 reports in this group","reports":[{"event":"Fatal fall","tags":"Unroped Scrambling During Descent"}]}],"childUnit":"reports carrying the tag","childNote":"Blue bars are mechanisms (how the accident happened); orange bars are background factors (what made it likely or worse). A report can carry several tags."}],"childUnit":"published reports"},{"id":"ter","name":"Terrain","value":9385,"blurb":"What the party was climbing on. One accident can span two surfaces.","unit":"terrain tags","period":"1951–2016","meta":"9,385 tags","children":[{"id":"ter-rock","name":"Rock","value":5936,"meta":"U.S. 5,358 / Canada 578  ·  68.3% of accidents  ·  133 in 2017 (71.5%)"},{"id":"ter-snow","name":"Snow","value":3061,"meta":"U.S. 2,686 / Canada 375  ·  35.2% of accidents  ·  44 in 2017 (23.7%)"},{"id":"ter-ice","name":"Ice","value":334,"meta":"U.S. 311 / Canada 23  ·  3.8% of accidents  ·  8 in 2017 (4.3%)"},{"id":"ter-unknown","name":"Unknown","value":36,"meta":"U.S. 25 / Canada 11  ·  0.4% of accidents  ·  1 in 2017 (0.5%)"},{"id":"ter-river","name":"River","value":28,"meta":"U.S. 25 / Canada 3  ·  0.3% of accidents  ·  0 in 2017 (0.0%)"}],"childUnit":"terrain tags, U.S. + Canada"},{"id":"pha","name":"Ascent or descent","value":7106,"blurb":"Which half of the climb the accident happened on, where recorded.","unit":"accidents","period":"1951–2016","meta":"7,106 accidents with a phase recorded","children":[{"id":"pha-ascent","name":"Ascent","value":4926,"meta":"U.S. 4,295 / Canada 631  ·  56.7% of accidents  ·  71 in 2017 (38.2%)"},{"id":"pha-descent","name":"Descent","value":1815,"meta":"U.S. 1,413 / Canada 402  ·  20.9% of accidents  ·  70 in 2017 (37.6%)"},{"id":"pha-unknown","name":"Unknown","value":323,"meta":"U.S. 308 / Canada 15  ·  3.7% of accidents  ·  37 in 2017 (19.9%)"},{"id":"pha-at-top-or-bottom-of-route","name":"At top or bottom of route","value":42,"meta":"U.S. 40 / Canada 2  ·  0.5% of accidents  ·  8 in 2017 (4.3%)"}],"childUnit":"accidents, U.S. + Canada"}]}, PLOTW=78, S1="var(--s1)", S2="var(--s2)";
+ var body=document.getElementById("xbody"),crumbs=document.getElementById("xcrumbs"),
+     ttl=document.getElementById("xtitle"),mta=document.getElementById("xmeta"),
+     note=document.getElementById("xnote"),root=document.getElementById("xp");
+ if(!body||!TREE)return;
+ function esc(s){return String(s).replace(/[&<>"]/g,function(c){
+   return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c];});}
+ function num(n){return (Math.round(n*10)/10).toLocaleString();}
+ function path(ids){ // resolve a list of ids to the node chain
+   var chain=[TREE],cur=TREE;
+   for(var i=0;i<ids.length;i++){
+     var kids=cur.children||[],hit=null;
+     for(var j=0;j<kids.length;j++) if(kids[j].id===ids[i]) hit=kids[j];
+     if(!hit)break;
+     chain.push(hit);cur=hit;
+   }
+   return chain;
+ }
+ function axmax(v,fixed){
+   if(fixed)return fixed;
+   var steps=[1,2,5,10,20,25,50,100,200,250,500,1000,2000,5000];
+   for(var i=0;i<steps.length;i++){var m=Math.ceil(v/steps[i])*steps[i];if(m/steps[i]<=6)return m;}
+   return v;
+ }
+ function grid(n){var h="";for(var i=0;i<n;i++)
+   h+='<div class="gl" style="left:'+(PLOTW*i/(n-1)).toFixed(2)+'%"></div>';return h;}
+ function axis(n,max,pct){var h="";for(var i=0;i<n;i++){
+   var v=max*i/(n-1),lab=pct?num(v)+"%":num(v);
+   h+='<div class="tick" style="left:'+(PLOTW*i/(n-1)).toFixed(2)+'%">'+lab+'</div>';}
+   return h;}
+ function render(ids){
+   var chain=path(ids),node=chain[chain.length-1];
+   // breadcrumb
+   var ch="";
+   for(var i=0;i<chain.length;i++){
+     var nm=i===0?"Climbing accident data":chain[i].name;
+     if(i)ch+='<span class="crumbsep">/</span>';
+     ch+= (i===chain.length-1)
+       ? '<span class="crumb" aria-current="page">'+esc(nm)+'</span>'
+       : '<button class="crumb" type="button" data-up="'+i+'">'+esc(nm)+'</button>';
+   }
+   crumbs.innerHTML=ch;
+   var kids=node.children||[];
+   if(node.view==="cards"){
+     ttl.textContent="Pick a dataset";mta.textContent=kids.length+" datasets";
+     note.textContent="Counts are cause tags unless a level says otherwise, and a single accident can carry several tags — so bars within a level are comparable, but they do not sum to the number of accidents.";
+     var hc="";
+     for(var k=0;k<kids.length;k++){var c=kids[k];
+       hc+='<button class="xcard" type="button" data-goto="'+c.id+'"><b>'+esc(c.name)+
+         '</b><span class="xunit">'+esc(c.period)+' · '+esc(c.meta)+
+         '</span><span class="xblurb">'+esc(c.blurb)+'</span><span class="xgo">'+
+         (c.children||[]).length+' categories <i>→</i></span></button>';}
+     body.className="xcards";body.innerHTML=hc;return;
+   }
+   ttl.textContent=node.name;
+   var parent=chain[chain.length-2]||TREE;
+   var unit=node.childUnit||parent.childUnit||"";
+   var pct=/%/.test(unit);
+   mta.textContent=kids.length?(kids.length+(kids.length===1?" category":" categories")+(unit?" · "+unit:"")):"";
+   note.textContent=node.childNote||parent.childNote||(node.meta||"");
+   if(!kids.length){
+     body.className="";
+     var reps=node.reports||[];
+     if(!reps.length){body.innerHTML='<p class="xempty">No further breakdown for this category.</p>';return;}
+     var hr='<div class="xleaf">';
+     for(var r=0;r<reps.length;r++)
+       hr+='<div class="rep"><b>'+esc(reps[r].event)+'</b><span>'+esc(reps[r].tags)+'</span></div>';
+     body.innerHTML=hr+'</div>';
+     mta.textContent=reps.length+(reps.length===1?" report":" reports");
+     note.textContent="The headline of each published report that carried this tag, as the editors wrote it.";
+     return;
+   }
+   var sorted=kids.slice().sort(function(a,b){return b.value-a.value;});
+   var max=axmax(sorted[0].value,node.childMax);
+   var kinds={};for(var q=0;q<sorted.length;q++) if(sorted[q].kind)kinds[sorted[q].kind]=1;
+   var multi=Object.keys(kinds).length>1;
+   var h='<div class="plot">';
+   if(multi)h+='<div class="legend"><span class="key"><i class="sw s1"></i>Mechanism</span>'+
+     '<span class="key"><i class="sw s2"></i>Background factor</span></div>';
+   h+='<div class="glwrap" aria-hidden="true">'+grid(4)+'</div><div class="plotrows">';
+   for(var i2=0;i2<sorted.length;i2++){
+     var c2=sorted[i2],w=(PLOTW*c2.value/max).toFixed(2),
+         deep=(c2.children&&c2.children.length)||(c2.reports&&c2.reports.length),
+         col=(c2.kind==="background")?S2:S1,
+         val=pct?num(c2.value)+"%":num(c2.value),
+         tip=esc(c2.name)+(c2.meta?" · "+esc(c2.meta):"")+
+             (deep?" · click to break down":"");
+     h+=(deep?'<button class="row" type="button" data-goto="'+c2.id+'"':'<div class="row" tabindex="0"')+
+        ' data-tip="'+tip+'"><div class="rlab">'+esc(c2.name)+
+        '</div><div class="rtrack"><div class="rbar" style="width:'+w+'%;background:'+col+
+        '"></div><span class="rval">'+val+'</span>'+
+        (deep?'<span class="chev">→</span>':'')+'</div>'+(deep?'</button>':'</div>');
+   }
+   h+='</div><div class="axis" aria-hidden="true">'+axis(4,max,pct)+'</div></div>';
+   body.className="";body.innerHTML=h;
+ }
+ function readHash(){
+   var h="";try{h=(location.hash||"").replace(/^#/,"");}catch(e){}
+   if(h.indexOf("x.")!==0)return [];
+   return h.slice(2).split(".").filter(Boolean);
+ }
+ var curIds=[];
+ // Render first, then try to mirror the state into the address bar. Some embeddings never
+ // deliver the hash, so navigation must not depend on hashchange firing.
+ function go(ids){
+   curIds=ids;
+   render(ids);
+   try{
+     var want=ids.length?"#x."+ids.join("."):"#explore";
+     if(location.hash!==want)location.hash=want;
+   }catch(e){}
+ }
+ root.addEventListener("click",function(e){
+   var g=e.target.closest?e.target.closest("[data-goto]"):null;
+   if(g){go(curIds.concat([g.getAttribute("data-goto")]));
+         try{root.scrollIntoView({block:"nearest"});}catch(err){}return;}
+   var u=e.target.closest?e.target.closest("[data-up]"):null;
+   if(u)go(curIds.slice(0,parseInt(u.getAttribute("data-up"),10)));
+ });
+ window.addEventListener("hashchange",function(){
+   var ids=readHash();
+   if(ids.join(".")===curIds.join("."))return; // our own write, already rendered
+   curIds=ids;render(ids);
+ });
+ var start=readHash();
+ if(start.length){curIds=start;render(start);}
+})();
+</script>
+
+<div id="tip" role="status" aria-live="polite"></div>
+<script>
+(function(){
+  try{
+    var tip=document.getElementById("tip"),cur=null;
+    function place(e){
+      var pad=14,w=tip.offsetWidth,h=tip.offsetHeight;
+      var x=e.clientX+pad,y=e.clientY+pad;
+      if(x+w>window.innerWidth-8){x=e.clientX-w-pad;}
+      if(y+h>window.innerHeight-8){y=e.clientY-h-pad;}
+      tip.style.left=Math.max(8,x)+"px";tip.style.top=Math.max(8,y)+"px";
+    }
+    function show(el,e){
+      var t=el.getAttribute("data-tip");if(!t)return;
+      tip.innerHTML=t;tip.classList.add("on");cur=el;if(e)place(e);
+    }
+    function hide(){tip.classList.remove("on");cur=null;}
+    document.addEventListener("mouseover",function(e){
+      var r=e.target.closest?e.target.closest(".row[data-tip]"):null;
+      if(r&&r!==cur)show(r,e);else if(!r&&cur)hide();
+    });
+    document.addEventListener("mousemove",function(e){if(cur)place(e);});
+    document.addEventListener("focusin",function(e){
+      var r=e.target.closest?e.target.closest(".row[data-tip]"):null;
+      if(!r)return hide();
+      var b=r.getBoundingClientRect();
+      show(r,{clientX:b.left+Math.min(b.width*.5,280),clientY:b.bottom-4});
+    });
+    document.addEventListener("focusout",hide);
+    window.addEventListener("scroll",hide,{passive:true});
+  }catch(err){}
+})();
+</script>
+</body>
+</html>

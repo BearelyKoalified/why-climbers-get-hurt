@@ -10,9 +10,15 @@ subcategory breakdown of how the individual events happened.
 
 `index.html` — the whole thing. One self-contained file: no build step, no framework,
 no dependency except Google Fonts. The page is a drill-down explorer and nothing else:
-pick a dataset, click any bar to break that category down, four levels deep at the
+pick a dataset, click any bar to break that category down, five levels deep at the
 deepest point. Every level is deep-linkable, so you can send someone straight to a
 specific breakdown.
+
+All three published tables are in it: Table I year by year (1951-2017, grouped by
+decade, down to the eight figures printed per year), Table II by district, and every
+block of Table III -- causes, terrain, phase, experience, age, sex, month and injury
+type. A branch stops where the published data stops splitting: a single printed cell,
+or, for the 2018 edition, a single accident report. 1,210 nodes in all.
 
 The prose analysis that used to sit around the explorer was removed; it is still in
 this repo's git history if you want it back.
